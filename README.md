@@ -41,7 +41,7 @@ Siga os passos abaixo para rodar a aplicação localmente no seu ambiente de des
 
 1. Clone o repositório:
 ```bash
-git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+git clone https://github.com/Fabiovieira05/Projeto-DPOC.git
 ```
 
 2. Acesse o diretório do projeto:
