@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Science_Gothic, Poppins } from "next/font/google";
+import { Header } from "@/components/ui/Header";
 
 const scienceGothic = Science_Gothic({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${scienceGothic.variable} ${poppins.variable}`}>
       <body className="antialiased">
+        <Header />
         {children}
       </body>
     </html>

@@ -7,6 +7,10 @@
   --color-green-800: #193A2B;
   --color-grey-800: #292926;
   --color-blue-400: #66A789;
+}
+
+@theme inline {
   --font-sans: var(--font-science-gothic), sans-serif;
+  --font-science-gothic: var(--font-science-gothic), sans-serif;
   --font-poppins: var(--font-poppins), sans-serif;
 }
