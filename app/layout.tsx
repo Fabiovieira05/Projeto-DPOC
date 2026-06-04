@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Science_Gothic } from "next/font/google";
+import { Science_Gothic, Poppins } from "next/font/google";
 
 const scienceGothic = Science_Gothic({
   subsets: ["latin"],
@@ -7,6 +7,12 @@ const scienceGothic = Science_Gothic({
   display: "swap",
 });
 
+const poppins = Poppins({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -14,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={scienceGothic.variable}>
+    <html lang="pt-BR" className={`${scienceGothic.variable} ${poppins.variable}`}>
       <body className="antialiased">
         {children}
       </body>
