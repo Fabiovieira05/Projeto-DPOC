@@ -1,0 +1,61 @@
+@reference "tailwindcss";
+
+.section {
+  @apply min-h-screen bg-green-100 flex items-center font-sans mx-auto;
+}
+
+.container {
+  @apply flex-col w-4/5 max-w-6xl mx-auto gap-8;
+}
+
+.textColumn {
+  @apply space-y-6 text-gray-800;
+}
+
+.subHeading {
+  font-family: var(--font-poppins);
+  color: var(--color-green-400);
+}
+
+.heading {
+  @apply text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-8;
+  font-family: var(--font-sans);
+}
+
+.divider {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 w-full items-stretch;
+}
+
+.paragraphs {
+  @apply flex flex-col h-full text-sm md:text-xl leading-relaxed gap-6;
+  color: var(--color-grey-900);
+  font-family: var(--font-poppins);
+}
+
+.cardsColumn {
+  @apply w-full flex lg:justify-end;
+}
+
+.cardsGrid {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+}
+
+.card {
+  @apply bg-green-100 border-2 rounded-xl p-6 flex flex-col justify-start transition-shadow hover:shadow-sm;
+  border-color: var(--color-green-500);
+  background-color: var(--color-green-200);
+}
+
+.cardIcon {
+  @apply text-3xl mb-4 block;
+}
+
+.cardTitle {
+  @apply text-green-500 font-bold text-base mb-2;
+  font-family: var(--font-sans);
+}
+
+.cardDescription {
+  @apply text-sm leading-normal;
+  font-family: var(--font-poppins);
+}
