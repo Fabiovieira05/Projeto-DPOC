@@ -6,6 +6,7 @@ import DiagnosticoDpoc from './components/DiagnosticoDPOC';
 import TratamentoDpoc from './components/TratamentoDPOC';
 import MonitoramentoTratamento from './components/MonitoramentoTratamento';
 import PrevencaoDpoc from './components/PrevencaoDpoc';
+import RedeCredenciada from './components/RedeCredenciada';
 
 export default function SaibaMaisPage() {
   return (
@@ -17,6 +18,7 @@ export default function SaibaMaisPage() {
       <TratamentoDpoc />
       <MonitoramentoTratamento />
       <PrevencaoDpoc />
+      <RedeCredenciada />
     </main>
   );
 }
