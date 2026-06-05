@@ -62,11 +62,11 @@ export default function TreatmentSection() {
       <div className="max-w-6xl w-4/5 mx-auto flex flex-col gap-10 md:gap-12">
         
         {/* Cabeçalho */}
-        <header className="flex flex-col text-left">
-          <span className="font-poppins text-green-400 font-medium text-2xl text-medium">
+        <header className="flex flex-col text-center md:text-left items-center md:items-start">
+          <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
             Cuide da sua saúde
           </span>
-          <h2 className="text-green-500 text-5xl md:text-4xl lg:text-5xl tracking-wide mb-8 font-sans">
+          <h2 className="text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
             Tratamento e acompanhamento
           </h2>
           <p className="flex flex-col h-full text-sm md:text-xl leading-relaxed gap-6 text-grey-900 font-poppins">

@@ -8,17 +8,17 @@ export default function IntroducaoDpoc() {
       <div className="flex-col w-4/5 max-w-6xl mx-auto gap-8">
         
         <div className="space-y-6 text-gray-800">
-          <div>
-            <span className="font-poppins text-green-400 font-medium text-2xl text-medium">
+          <div className="flex flex-col text-center md:text-left items-center md:items-start">
+            <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
               Entenda a doença
             </span>
-            <h2 className= "text-green-500 text-5xl md:text-4xl lg:text-5xl tracking-wide mb-8 font-sans">
+            <h2 className= "text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-8 font-sans">
               Introdução
             </h2>
           </div>
         </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 w-full items-stretch">
-            <div className="flex flex-col h-full text-sm md:text-xl leading-relaxed gap-6 text-grey-900 font-poppins">
+            <div className="flex flex-col text-center md:text-left h-full text-base md:text-lg lg:text-xl leading-relaxed gap-4 md:gap-6 text-gray-900 font-poppins">
               <p>
                 A DPOC é uma doença respiratória progressiva que dificulta a passagem do ar pelos pulmões, causando limitação respiratória e comprometendo atividades do dia a dia.
               </p>

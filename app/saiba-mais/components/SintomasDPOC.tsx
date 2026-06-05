@@ -38,17 +38,17 @@ export default function SintomasDpoc() {
   return (
     <section className="w-full py-16 md:py-24 bg-[#f4f9f6]">
       <div className="max-w-6xl w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div className="flex flex-col order-1 lg:order-2 text-left lg:text-right lg:items-end">
-          <span className="font-poppins text-green-400 font-medium text-2xl text-medium">
+        <div className="flex flex-col text-center md:text-left items-center md:items-start">
+          <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
             Reconheça os sinais
           </span>
           
-          <h2 className="text-green-500 font-sans text-3xl md:text-4xl lg:text-4xl tracking-wide mb-6">
+          <h2 className="text-green-500 text-4xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
             Principais sintomas
           </h2>
           
           {/* lg:ml-auto empurra o parágrafo (que tem tamanho máximo) para encostar na direita */}
-          <p className="flex flex-col h-full text-sm md:text-xl leading-relaxed gap-6 text-grey-900 font-poppins">
+          <p className="flex flex-col text-center md:text-left h-full text-base md:text-lg lg:text-xl leading-relaxed gap-4 md:gap-6 text-gray-900 font-poppins">
             Os sintomas da DPOC costumam surgir gradualmente e podem se intensificar com o tempo. Reconhecê-los precocemente é fundamental para iniciar o tratamento adequado e evitar complicações.
           </p>
         </div>

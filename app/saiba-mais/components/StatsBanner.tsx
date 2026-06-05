@@ -24,29 +24,29 @@ export default function StatsBanner() {
     <section className="w-full bg-[#EAF0ED] py-12 md:py-16">
       
      
-      <div className="max-w-6xl w-4/5 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+      <div className="max-w-6xl w-4/5 mx-auto grid grid-cols-3 gap-2 md:gap-8">
         
         {statsData.map((stat, index) => (
           <article 
             key={index} 
             className={`flex flex-col items-start text-left ${
-              index === 0 ? 'md:justify-self-start' : 
-              index === 1 ? 'md:justify-self-center' : 
-              'md:justify-self-end'
+              index === 0 ? 'justify-self-start items-start text-left'  : 
+              index === 1 ? 'justify-self-center items-center text-center ' : 
+              'justify-self-end items-start text-left'
             }`}
             aria-label={`${stat.value} ${stat.description.replace('\n', ' ')}`}
           >
             
             <span 
               aria-hidden="true" 
-              className="text-green-500 font-sans text-5xl md:text-6xl mb-2 tracking-wide"
+              className="text-green-500 font-sans text-2xl sm:text-4xl md:text-5xl lg:text-6xl mb-1 md:mb-2 tracking-wide"
             >
               {stat.value}
             </span>
             
             <p 
               aria-hidden="true" 
-              className="text-gray-800 font-poppins text-sm md:text-base font-medium leading-snug whitespace-pre-line"
+              className="text-gray-800 font-poppins text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-snug whitespace-pre-line"
             >
               {stat.description}
             </p>
