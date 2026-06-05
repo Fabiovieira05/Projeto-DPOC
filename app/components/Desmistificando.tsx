@@ -3,15 +3,15 @@ import Accordion from "./Accordion";
 export default function Desmistificando() {
   return (
     <section className="w-full">
-      <div className="mx-auto w-full max-w-5xl px-4 py-12 md:px-6 md:py-16">
+      <div className="mx-auto w-full max-w-5xl px-6 py-16">
         <div className="w-full text-left">
           <p className="text-sm font-semibold text-dpoc-green">
             Desmistificando
           </p>
-          <h2 className="hero-title mt-2 text-3xl md:text-4xl text-[#326750]">
+          <h2 className="hero-title mt-2 text-4xl text-[#326750]">
             Mitos e verdades
           </h2>
-          <p className="mt-4 text-zinc-700 text-sm md:text-base max-w-3xl">
+          <p className="mt-4 text-zinc-700 text-base md:text-lg max-w-3xl">
             Existem muitos equívocos sobre a DPOC que podem atrasar o diagnóstico e prejudicar o
             tratamento. Clique em cada afirmação para descobrir a verdade.
           </p>

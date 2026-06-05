@@ -12,20 +12,21 @@ export default function Accordion({ items }: { items: Item[] }) {
       {items.map((it, i) => (
         <div key={i} className="w-full">
           <button
-            className="w-full flex items-center justify-between bg-[#326750] text-white px-4 py-3 sm:px-5 sm:py-4 rounded-md transition-colors hover:bg-[#285340]"
+            className="w-full flex items-center justify-between bg-[#326750] text-white px-5 py-4 rounded-md transition-colors hover:bg-[#285340]"
             onClick={() => setOpen(open === i ? null : i)}
             aria-expanded={open === i}
           >
             <div className="flex items-center gap-4">
-             
-              <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Ícone decorativo ignorado por leitores de tela */}
+              <svg aria-hidden="true" width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span className="text-left font-medium text-sm md:text-[15px]">{it.title}</span>
+              <span className="text-left font-medium text-[15px]">{it.title}</span>
             </div>
             
-            
+            {/* Ícone decorativo ignorado por leitores de tela */}
             <svg
+              aria-hidden="true"
               className={`w-5 h-5 transition-transform duration-200 ${open === i ? 'rotate-180' : ''}`}
               fill="none"
               viewBox="0 0 24 24"
@@ -36,7 +37,7 @@ export default function Accordion({ items }: { items: Item[] }) {
           </button>
 
           {open === i && (
-            <div className="mt-2 rounded-md bg-white p-4 md:p-5 text-zinc-700 text-sm md:text-base shadow-sm border-2 border-dpoc-green">
+            <div className="mt-2 rounded-md bg-white p-5 text-zinc-700 shadow-sm border-2 border-dpoc-green">
               {it.content}
             </div>
           )}
