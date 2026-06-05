@@ -1,8 +1,9 @@
 import React from 'react';
-import IntroducaoDpoc from './components/IntroducaoDpoc';
+import IntroducaoDpoc from './components/IntroducaoDPOC';
 import StatsBanner from './components/StatsBanner';
 import Footer from '../components/Footer';
 import SintomasDpoc from './components/SintomasDPOC';
+import DiagnosticoDpoc from './components/DiagnosticoDPOC';
 
 export default function SaibaMaisPage() {
   return (
@@ -10,7 +11,7 @@ export default function SaibaMaisPage() {
       <IntroducaoDpoc />
       <StatsBanner />
       <SintomasDpoc />
-      {/* Futuramente, as próximas seções da página "Saiba Mais" entrarão aqui abaixo */}
+      <DiagnosticoDpoc />
       <Footer />
     </main>
   );

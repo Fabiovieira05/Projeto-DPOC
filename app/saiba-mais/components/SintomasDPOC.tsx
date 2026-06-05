@@ -48,7 +48,7 @@ export default function SintomasDpoc() {
           </h2>
           
           {/* lg:ml-auto empurra o parágrafo (que tem tamanho máximo) para encostar na direita */}
-          <p className="text-gray-800 font-poppins text-base leading-relaxed max-w-md lg:ml-auto">
+          <p className="flex flex-col h-full text-sm md:text-xl leading-relaxed gap-6 text-grey-900 font-poppins">
             Os sintomas da DPOC costumam surgir gradualmente e podem se intensificar com o tempo. Reconhecê-los precocemente é fundamental para iniciar o tratamento adequado e evitar complicações.
           </p>
         </div>
