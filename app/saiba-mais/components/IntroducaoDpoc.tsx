@@ -1,18 +1,18 @@
 import React from 'react';
 import { introCardsData } from '../../../data/introCardsData';
-import styles from './IntroducaoDpoc.module.css';
+
 
 export default function IntroducaoDpoc() {
   return (
-    <section className="min-h-screen bg-green-100 flex items-center font-sans mx-auto">
+    <section className=" flex items-center mx-auto pt-24 pb-16">
       <div className="flex-col w-4/5 max-w-6xl mx-auto gap-8">
         
         <div className="space-y-6 text-gray-800">
           <div>
-            <span className="font-poppins text-green-400">
+            <span className="font-poppins text-green-400 font-medium text-2xl text-medium">
               Entenda a doença
             </span>
-            <h2 className= "text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-8 font-sans">
+            <h2 className= "text-green-500 text-5xl md:text-4xl lg:text-5xl tracking-wide mb-8 font-sans">
               Introdução
             </h2>
           </div>
@@ -35,7 +35,7 @@ export default function IntroducaoDpoc() {
             <div className=" w-full flex lg:justify-end">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {introCardsData.map((card, index) => (
-                  <div key={index} className="bg-green-100 border-2 rounded-xl p-6 flex flex-col justify-start transition-shadow hover:shadow-sm border-green-500 bg-green-200">
+                  <div key={index} className="bg-[#EDF9EF] border border-green-400 rounded-xl p-6 flex flex-col justify-start transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#D8F3DC] ">
                     <span 
                       role="img" 
                       aria-label={card.ariaLabel} 

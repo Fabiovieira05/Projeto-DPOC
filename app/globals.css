@@ -5,6 +5,7 @@
   --foreground: #171717;
   --dpoc-green: #5b8b78;
   --dpoc-green-dark: #3f6b56;
+  --color-green-50: #FBFEFC
   --color-green-100: #F3FBF4;
   --color-green-200: #EDF9EF;
   --color-green-400: #578872;
@@ -12,21 +13,20 @@
   --color-green-800: #193A2B;
   --color-grey-800: #292926;
   --color-blue-400: #66A789;
-  --font-sans: var(--font-science-gothic), sans-serif;
-  --font-poppins: var(--font-poppins), sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-science-gothic), sans-serif;
+  --font-poppins: var(--font-poppins), sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
 /* removed dark theme override to keep site in light theme like the design */
 
 body {
-  background: var(--background);
+  background: var(--color-green-100);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
