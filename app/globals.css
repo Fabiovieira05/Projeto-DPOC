@@ -64,9 +64,7 @@ body {
   border-color: #4a7a6a !important;
 }
 
-.dark .bg-white {
-  background-color: #1e3a50;
-}
+
 
 /* Card hover */
 .dark .hover\:bg-\[\#D8F3DC\]:hover {

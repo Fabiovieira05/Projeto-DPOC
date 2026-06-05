@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "../components/ScrollReveal";
 
 // 1. Dicionário de dados estáticos para manter o componente visual limpo
 const INTEGRANTES = [
@@ -100,50 +101,57 @@ export default function SobreNos() {
         <main className="min-h-screen bg-[#F3FBF4] px-6 py-16 flex flex-col items-center font-sans">
 
             {/* Seção Integrantes */}
-            <section className="w-full max-w-5xl mb-16" aria-labelledby="integrantes-title">
-                <h2 id="integrantes-title" className="font-science-gothic text-2xl md:text-3xl  text-green-500 text-center mb-10">
-                    Integrantes
-                </h2>
+            <ScrollReveal>
+                <section className="w-full max-w-5xl mb-16" aria-labelledby="integrantes-title">
+                    <h2 id="integrantes-title" className="font-science-gothic text-2xl md:text-3xl  text-green-500 text-center mb-10">
+                        Integrantes
+                    </h2>
 
-                {/* Grid: 1 no mobile, 3 no tablet, 6 no desktop */}
-                <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-8 place-items-center">
-                    {INTEGRANTES.map((person) => (
-                        <TeamMember key={person.name} {...person} />
-                    ))}
-                </ul>
-            </section>
+                    {/* Grid: 1 no mobile, 3 no tablet, 6 no desktop */}
+                    <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-8 place-items-center">
+                        {INTEGRANTES.map((person) => (
+                            <TeamMember key={person.name} {...person} />
+                        ))}
+                    </ul>
+                </section>
+            </ScrollReveal>
 
             {/* Seção Desenvolvedores */}
-            <section className="w-full max-w-4xl" aria-labelledby="desenvolvedores-title">
-                <h2 id="desenvolvedores-title" className="font-science-gothic text-2xl md:text-3xl  text-green-500 text-center mb-10">
-                    Desenvolvedores
-                </h2>
+            <ScrollReveal>
+                <section className="w-full max-w-4xl" aria-labelledby="desenvolvedores-title">
+                    <h2 id="desenvolvedores-title" className="font-science-gothic text-2xl md:text-3xl  text-green-500 text-center mb-10">
+                        Desenvolvedores
+                    </h2>
 
-                {/* Grid: 1 no mobile, 2 ou 4 para maiores */}
-                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8 place-items-center">
-                    {DESENVOLVEDORES.map((person) => (
-                        <TeamMember key={person.name} {...person} />
-                    ))}
-                </ul>
-            </section>
-            <section
-                className="w-full max-w-5xl mt-16 pt-16"
-                aria-labelledby="referencias-title"
-            >
-                <h2
-                    id="referencias-title"
-                    className="font-science-gothic text-2xl md:text-3xl text-green-500 text-center mb-10"
+                    {/* Grid: 1 no mobile, 2 ou 4 para maiores */}
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8 place-items-center">
+                        {DESENVOLVEDORES.map((person) => (
+                            <TeamMember key={person.name} {...person} />
+                        ))}
+                    </ul>
+                </section>
+            </ScrollReveal>
+
+            <ScrollReveal>
+                <section
+                    className="w-full max-w-5xl mt-16 pt-16"
+                    aria-labelledby="referencias-title"
                 >
-                    Referências
-                </h2>
-                <ol className="list-decimal list-outside pl-5 space-y-4 font-poppins text-sm md:text-base text-grey-800 text-justify leading-relaxed break-words">
-                    {REFERENCIAS_BIBLIOGRAFICAS.map((referencia, index) => (
-                        <li key={index}>
-                            {referencia}
-                        </li>
-                    ))}
-                </ol>
-            </section>
+                    <h2
+                        id="referencias-title"
+                        className="font-science-gothic text-2xl md:text-3xl text-green-500 text-center mb-10"
+                    >
+                        Referências
+                    </h2>
+                    <ol className="list-decimal list-outside pl-5 space-y-4 font-poppins text-sm md:text-base text-grey-800 text-justify leading-relaxed break-words">
+                        {REFERENCIAS_BIBLIOGRAFICAS.map((referencia, index) => (
+                            <li key={index}>
+                                {referencia}
+                            </li>
+                        ))}
+                    </ol>
+                </section>
+            </ScrollReveal>
         </main>
     );
 }

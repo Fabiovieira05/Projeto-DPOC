@@ -29,7 +29,7 @@ export default function RootLayout({
       className={`${scienceGothic.variable} ${poppins.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col font-poppins">
+      <body className="min-h-full flex flex-col font-poppins overflow-x-hidden">
         <ThemeProvider>
           <Navbar />
           <VLibrasWidget />

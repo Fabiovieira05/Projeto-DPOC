@@ -2,7 +2,7 @@ import Accordion from "../../components/Accordion";
 
 export default function MonitoramentoTratamento() {
     return (
-        <section className="w-full py-16 md:py-24 bg-white dark:!bg-[#292929]">
+        <section className="w-full py-16 md:py-24 bg-[#f4f9f5]">
             <div className="flex flex-col mx-auto w-full max-w-7xl px-6 gap-10 md:gap-12">
                 <header className="flex flex-col text-center md:text-left items-center md:items-start">
                     <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
