@@ -13,7 +13,6 @@ export default function Home() {
         <CuidadoIntegral />
         <BemEstarIntegral />
       </div>
-      <Footer />
     </div>
   );
 }

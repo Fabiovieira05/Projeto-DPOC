@@ -7,6 +7,14 @@ import { useState } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  // Função que procura o botão original do VLibras e simula um clique nele
+  const handleOpenVLibras = () => {
+    const defaultButton = document.querySelector('[vw-access-button]') as HTMLElement;
+    if (defaultButton) {
+      defaultButton.click();
+    }
+  };
+
   return (
     <header className="w-full bg-dpoc-green">
       <div className="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
@@ -38,11 +46,16 @@ export default function Navbar() {
           </nav>
           <button
             aria-label="alternar tema"
-            className="hidden md:inline-flex h-9 w-9 items-center justify-center rounded-md bg-white/10 text-white"
+            className="hidden md:inline-flex h-9 w-9 items-center justify-center rounded-md bg-white/10 text-white hover:bg-white/20 transition-colors"
           >
             ☾
           </button>
-          <button className="hidden md:inline-flex rounded-md bg-white/10 px-3 py-1 text-white">
+          
+          {/* Adicionado o onClick aqui no botão Desktop */}
+          <button 
+            onClick={handleOpenVLibras}
+            className="hidden md:inline-flex rounded-md bg-white/10 px-3 py-1 text-white hover:bg-white/20 transition-colors"
+          >
             VLibras
           </button>
 
@@ -57,11 +70,22 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-dpoc-green text-white">
-          <div className="px-6 py-4 flex flex-col gap-3">
-            <Link href="#">Home</Link>
-            <Link href="#">Saiba mais</Link>
-            <Link href="#">Sobre nós</Link>
+        <div className="md:hidden bg-dpoc-green text-white border-t border-white/10">
+          <div className="px-6 py-4 flex flex-col gap-4">
+            <Link href="#" onClick={() => setOpen(false)}>Home</Link>
+            <Link href="../saiba-mais" onClick={() => setOpen(false)}>Saiba mais</Link>
+            <Link href="../sobre-nos" onClick={() => setOpen(false)}>Sobre nós</Link>
+            
+            {/* Adicionado o botão no menu Mobile para não quebrar a acessibilidade no celular */}
+            <button 
+              onClick={() => {
+                handleOpenVLibras();
+                setOpen(false); // Fecha o menu ao abrir o VLibras
+              }}
+              className="text-left font-bold text-green-200"
+            >
+              Ativar VLibras
+            </button>
           </div>
         </div>
       )}
