@@ -12,7 +12,14 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <Image src="/DPOC.png" alt="DPOC" width={120} height={32} priority />
+            <Image
+              src="/DPOC.png"
+              alt="DPOC"
+              width={120}
+              height={32}
+              priority
+              className="w-auto h-auto object-contain"
+            />
             <span className="sr-only">DPOC</span>
           </Link>
         </div>

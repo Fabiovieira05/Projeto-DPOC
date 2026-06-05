@@ -17,14 +17,14 @@ export default function Accordion({ items }: { items: Item[] }) {
             aria-expanded={open === i}
           >
             <div className="flex items-center gap-4">
-              {/* Ícone de X (Mito) */}
+             
               <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <span className="text-left font-medium text-[15px]">{it.title}</span>
             </div>
             
-            {/* Ícone de Chevron animado (Seta V) */}
+            
             <svg
               className={`w-5 h-5 transition-transform duration-200 ${open === i ? 'rotate-180' : ''}`}
               fill="none"
