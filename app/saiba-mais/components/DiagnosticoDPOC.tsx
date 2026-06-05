@@ -51,8 +51,8 @@ const DiagnosisListItem: React.FC<DiagnosisListItemProps> = ({ title, descriptio
 
 export default function DiagnosticoDpoc() {
   return (
-    <section className="w-full py-16 md:py-24 bg-[#f4f9f6]">
-      <div className="max-w-4/5  max-w-6xl mx-auto flex flex-col gap-10 md:gap-12">
+    <section className="w-full py-8 md:py-24 bg-[#f4f9f6]">
+      <div className="max-w-6xl mx-auto flex flex-col gap-10 md:gap-12">
         
         <header className="flex flex-col text-left">
           <span className="font-poppins text-green-400 font-medium text-2xl text-medium">
