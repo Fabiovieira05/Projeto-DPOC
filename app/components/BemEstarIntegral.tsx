@@ -10,16 +10,16 @@ export default function BemEstarIntegral() {
 
   return (
     <section className="w-full">
-      <div className="mx-auto w-full max-w-5xl px-6 py-16">
+      <div className="mx-auto w-full max-w-7xl px-6 py-16">
         <div className="w-full text-left mb-10">
           <p className="text-sm font-semibold text-dpoc-green">
             Bem-estar integral
           </p>
-          <h2 className="hero-title mt-2 text-4xl text-[#326750] leading-tight max-w-4xl">
+          <h2 className="hero-title mt-2 text-4xl text-[#326750] leading-tight w-full">
             Práticas Integrativas relacionadas à DPOC
           </h2>
-          
-          <div className="mt-6 flex flex-col gap-4 text-zinc-700 text-base md:text-lg max-w-4xl">
+
+          <div className="mt-6 flex flex-col gap-4 text-zinc-700 text-base md:text-lg w-full">
             <p>As práticas integrativas e complementares podem auxiliar no bem-estar físico e emocional de pacientes com DPOC, contribuindo para o relaxamento, redução da ansiedade e melhora da qualidade de vida.</p>
             <p>Embora não substituam o tratamento convencional, essas práticas podem atuar de forma complementar no controle dos sintomas e no fortalecimento emocional dos pacientes. O SUS oferta diversas PICs por meio da Política Nacional de Práticas Integrativas e Complementares (PNPIC).</p>
           </div>

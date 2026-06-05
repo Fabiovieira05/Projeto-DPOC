@@ -27,7 +27,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${scienceGothic.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-poppins">
         <Navbar />
         <VLibrasWidget />
         {children}

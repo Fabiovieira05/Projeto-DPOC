@@ -12,16 +12,16 @@ export default function CuidadoIntegral() {
 
   return (
     <section className="w-full">
-      <div className="mx-auto w-full max-w-5xl px-6 py-16">
+      <div className="mx-auto w-full max-w-7xl px-6 py-16">
         <div className="w-full text-left mb-10">
           <p className="text-sm font-semibold text-dpoc-green">
             Cuidado integral
           </p>
-          <h2 className="hero-title mt-2 text-4xl text-[#326750] leading-tight max-w-4xl">
+          <h2 className="hero-title mt-2 text-4xl text-[#326750] leading-tight w-full">
             Cuidados de Enfermagem e promoção da saúde
           </h2>
-          
-          <div className="mt-6 flex flex-col gap-4 text-zinc-700 text-base md:text-lg max-w-4xl">
+
+          <div className="mt-6 flex flex-col gap-4 text-zinc-700 text-base md:text-lg w-full">
             <p>A enfermagem possui papel fundamental na prevenção, orientação e acompanhamento de pacientes com DPOC. Os profissionais atuam diretamente na educação em saúde, incentivo ao autocuidado, orientação sobre o uso correto de medicamentos, prevenção de complicações e fortalecimento da adesão ao tratamento.</p>
             <p>Além disso, o suporte emocional e a orientação familiar ajudam na melhora da qualidade de vida e no enfrentamento das limitações causadas pela doença.</p>
           </div>

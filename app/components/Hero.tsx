@@ -5,7 +5,7 @@ export default function Hero() {
     <main className="mx-auto w-full max-w-7xl px-6 py-12">
       <section className="flex flex-col-reverse items-center gap-8 md:flex-row md:items-center">
         <div className="md:flex-1">
-          <h1 className="hero-title text-[#0f1720] leading-tight">
+          <h1 className="hero-title font-normal text-[#0f1720] leading-tight">
             Respirar bem é
             <span className="ml-2 italic text-dpoc-green">viver melhor!</span>
           </h1>

@@ -7,27 +7,35 @@ type Item = { title: string; content: string };
 export default function Accordion({ items }: { items: Item[] }) {
   const [open, setOpen] = useState<number | null>(null);
 
+  const toggle = (i: number) => setOpen(open === i ? null : i);
+
   return (
-    <div className="w-full flex flex-col gap-3">
+    <div className="w-full flex flex-col gap-4" role="list">
       {items.map((it, i) => (
-        <div key={i} className="w-full">
+        <div key={i} className="w-full" role="listitem">
           <button
-            className="w-full flex items-center justify-between bg-[#326750] text-white px-5 py-4 rounded-md transition-colors hover:bg-[#285340]"
-            onClick={() => setOpen(open === i ? null : i)}
+            className="w-full flex items-center justify-between bg-[#326750] text-white px-6 py-5 rounded-lg transition-colors hover:bg-[#285340] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#326750]"
+            onClick={() => toggle(i)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                toggle(i);
+              }
+            }}
             aria-expanded={open === i}
+            aria-controls={`accordion-panel-${i}`}
+            id={`accordion-btn-${i}`}
           >
             <div className="flex items-center gap-4">
-              {/* Ícone decorativo ignorado por leitores de tela */}
-              <svg aria-hidden="true" width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span className="text-left font-medium text-[15px]">{it.title}</span>
+              <span className="text-left font-medium text-base md:text-lg leading-snug">
+                {it.title}
+              </span>
             </div>
-            
-            {/* Ícone decorativo ignorado por leitores de tela */}
+
+            {/* Seta rotacionável */}
             <svg
               aria-hidden="true"
-              className={`w-5 h-5 transition-transform duration-200 ${open === i ? 'rotate-180' : ''}`}
+              className={`w-6 h-6 shrink-0 ml-4 transition-transform duration-300 ease-in-out ${open === i ? "rotate-180" : ""}`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -36,11 +44,25 @@ export default function Accordion({ items }: { items: Item[] }) {
             </svg>
           </button>
 
-          {open === i && (
-            <div className="mt-2 rounded-md bg-white p-5 text-zinc-700 shadow-sm border-2 border-dpoc-green">
+          {/* Painel com animação suave */}
+          <div
+            id={`accordion-panel-${i}`}
+            role="region"
+            aria-labelledby={`accordion-btn-${i}`}
+            style={{
+              maxHeight: open === i ? "400px" : "0px",
+              opacity: open === i ? 1 : 0,
+              overflow: "hidden",
+              transition: "max-height 0.5s ease-in-out, opacity 0.45s ease-in-out",
+            }}
+          >
+            <div
+              className="mt-2 rounded-lg px-6 py-5 text-zinc-700 text-base md:text-lg leading-relaxed"
+              style={{ backgroundColor: "#D8F3DC" }}
+            >
               {it.content}
             </div>
-          )}
+          </div>
         </div>
       ))}
     </div>
