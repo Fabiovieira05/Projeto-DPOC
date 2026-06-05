@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Science_Gothic, Poppins } from "next/font/google";
 import VLibrasWidget from "./components/Vlibras";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const scienceGothic = Science_Gothic({
   subsets: ["latin"],
@@ -26,12 +27,15 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       className={`${scienceGothic.variable} ${poppins.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col font-poppins">
-        <Navbar />
-        <VLibrasWidget />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <VLibrasWidget />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

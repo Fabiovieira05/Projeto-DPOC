@@ -5,14 +5,14 @@
   --foreground: #171717;
   --dpoc-green: #5b8b78;
   --dpoc-green-dark: #3f6b56;
-  --color-green-50: #FBFEFC --color-green-100: #F3FBF4;
+  --color-green-50: #D8F3DC;
+  --color-green-100: #F3FBF4;
   --color-green-200: #EDF9EF;
   --color-green-400: #578872;
   --color-green-500: #2D6A4F;
   --color-green-800: #193A2B;
   --color-grey-800: #292926;
   --color-blue-400: #66A789;
-  --color-green-50: #D8F3DC;
 }
 
 @theme inline {
@@ -23,12 +23,179 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* removed dark theme override to keep site in light theme like the design */
-
 body {
-  background: #F3FBF4;
+  background: var(--background);
   color: var(--foreground);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== DARK MODE ===== */
+.dark {
+  --background: #292929;
+  --foreground: #e0e0e0;
+}
+
+/* Body & page backgrounds */
+.dark body,
+.dark .min-h-screen {
+  background-color: #292929 !important;
+  color: #e0e0e0;
+}
+
+/* Section backgrounds */
+.dark section,
+.dark main {
+  background-color: #292929 !important;
+}
+
+/* Specific section bg overrides */
+.dark .bg-\[\#f4f9f5\],
+.dark .bg-\[\#f4f9f6\],
+.dark .bg-\[\#F3FBF4\],
+.dark .bg-\[\#EAF0ED\] {
+  background-color: #292929 !important;
+}
+
+/* Cards */
+.dark .bg-\[\#EDF9EF\],
+.dark .bg-\[\#e8f1ec\] {
+  background-color: #2a4a3e !important;
+  border-color: #4a7a6a !important;
+}
+
+.dark .bg-white {
+  background-color: #1e3a50 !important;
+}
+
+/* Card hover */
+.dark .hover\:bg-\[\#D8F3DC\]:hover {
+  background-color: #345a4d !important;
+}
+
+/* Text colors */
+.dark .text-gray-800,
+.dark .text-gray-900,
+.dark .text-grey-900,
+.dark .text-zinc-700,
+.dark .text-zinc-900,
+.dark .text-gray-800\/90 {
+  color: #d0d0d0 !important;
+}
+
+.dark .text-\[\#0f1720\] {
+  color: #e8e8e8 !important;
+}
+
+.dark .text-\[\#326750\] {
+  color: #7abf9a !important;
+}
+
+.dark .text-green-500 {
+  color: #7abf9a !important;
+}
+
+.dark .text-green-400 {
+  color: #6aaf8a !important;
+}
+
+.dark .text-grey-800 {
+  color: #d0d0d0 !important;
+}
+
+/* Green background elements (header, accordion buttons) */
+.dark .bg-dpoc-green {
+  background-color: #2d5a47 !important;
+}
+
+.dark .bg-\[\#326750\] {
+  background-color: #2d5a47 !important;
+}
+
+.dark .hover\:bg-\[\#285340\]:hover {
+  background-color: #1e4a37 !important;
+}
+
+/* Footer — mantém o mesmo verde escuro nos dois temas */
+.dark .bg-\[\#1e3a2b\] {
+  background-color: #1e3a2b !important;
+}
+
+/* Accordion open panel */
+.dark [style*="background-color: rgb(216, 243, 220)"],
+.dark [style*="backgroundColor"] {
+  background-color: #2a4a3e !important;
+}
+
+/* Border overrides */
+.dark .border-green-400 {
+  border-color: #4a7a6a !important;
+}
+
+.dark .border-\[\#326750\] {
+  border-color: #4a7a6a !important;
+}
+
+.dark .border-green-800 {
+  border-color: #4a7a6a !important;
+}
+
+/* Diagnosis circle icons */
+.dark .bg-green-100 {
+  background-color: #2a4a3e !important;
+}
+
+/* Stats banner */
+.dark .bg-\[\#EAF0ED\] {
+  background-color: #16213e !important;
+}
+
+/* Sobre nos page background */
+.dark .bg-\[\#F3FBF4\] {
+  background-color: #292926 !important;
+}
+
+/* Avatar border */
+.dark .border-grey-800 {
+  border-color: #4a7a6a !important;
+}
+
+/* Hero buttons */
+.dark .btn-dpoc {
+  background: #2d5a47;
+  color: white;
+}
+
+.dark .btn-dpoc-outline {
+  border-color: #7abf9a;
+  color: #7abf9a;
+}
+
+/* Rede credenciada tag badges */
+.dark .border-green-400.rounded-full {
+  border-color: #6aaf8a !important;
+  color: #6aaf8a !important;
+}
+
+/* ===== END DARK MODE ===== */
+
+/* Accordion panel background — controlled by class for dark mode */
+.accordion-panel-bg {
+  background-color: #D8F3DC;
+}
+
+.dark .accordion-panel-bg {
+  background-color: #D8F3DC !important;
+  color: #292926 !important;
+}
+
+/* StatsBanner background */
+.stats-banner-bg {
+  background-color: #EAF0ED;
+}
+
+.dark .stats-banner-bg {
+  background-color: #1F1F1D !important;
 }
 
 /* small helpers used by the Home hero */
@@ -51,12 +218,11 @@ body {
   background: transparent;
 }
 
-/* Hero title typography (Science Gothic: size 48, line-height 120%, letter-spacing 0) */
+/* Hero title typography */
 .hero-title {
   font-family: "Science Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   font-size: 48px;
   line-height: 1.2;
-  /* 120% */
   letter-spacing: 0px;
   font-weight: 400;
 }

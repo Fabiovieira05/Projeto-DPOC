@@ -57,8 +57,7 @@ export default function Accordion({ items }: { items: Item[] }) {
             }}
           >
             <div
-              className="mt-2 rounded-lg px-6 py-5 text-zinc-700 text-base md:text-lg leading-relaxed"
-              style={{ backgroundColor: "#D8F3DC" }}
+              className="mt-2 rounded-lg px-6 py-5 text-zinc-700 text-base md:text-lg leading-relaxed accordion-panel-bg"
             >
               {it.content}
             </div>
