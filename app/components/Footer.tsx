@@ -6,16 +6,15 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-7xl px-6 pt-16 pb-8">
         
        
-        <div className="flex justify-end mb-8">
-          <div className="flex flex-col items-end text-right">
+        <div className="flex justify-center md:justify-end mb-8">
+          <div className="flex flex-col items-center md:items-end text-center md:text-right">
             <div className="mb-3">
-              
               <Image
                 src="/unblogo.png"
                 alt="Logo Universidade de Brasília"
                 width={110}
                 height={40}
-                className="object-contain"
+                className="object-contain mx-auto md:mx-0"
               />
             </div>
             <p className="text-sm font-medium text-white/90">

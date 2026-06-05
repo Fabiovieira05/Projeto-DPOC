@@ -12,24 +12,24 @@ export default function CuidadoIntegral() {
 
   return (
     <section className="w-full">
-      <div className="mx-auto w-full max-w-5xl px-6 py-16">
+      <div className="mx-auto w-full max-w-5xl px-4 py-12 md:px-6 md:py-16">
         <div className="w-full text-left mb-10">
           <p className="text-sm font-semibold text-dpoc-green">
             Cuidado integral
           </p>
-          <h2 className="hero-title mt-2 text-4xl text-[#326750] leading-tight max-w-4xl">
+          <h2 className="hero-title mt-2 text-3xl md:text-4xl text-[#326750] leading-tight max-w-4xl">
             Cuidados de Enfermagem e promoção da saúde
           </h2>
           
-          <div className="mt-6 flex flex-col gap-4 text-zinc-700 text-base md:text-lg max-w-4xl">
+          <div className="mt-6 flex flex-col gap-4 text-zinc-700 text-sm md:text-base max-w-4xl">
             <p>A enfermagem possui papel fundamental na prevenção, orientação e acompanhamento de pacientes com DPOC. Os profissionais atuam diretamente na educação em saúde, incentivo ao autocuidado, orientação sobre o uso correto de medicamentos, prevenção de complicações e fortalecimento da adesão ao tratamento.</p>
             <p>Além disso, o suporte emocional e a orientação familiar ajudam na melhora da qualidade de vida e no enfrentamento das limitações causadas pela doença.</p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {cuidadosCards.map((card, index) => (
-            <div key={index} className="bg-[#e8f1ec] rounded-2xl p-6 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300">
+            <div key={index} className="bg-[#e8f1ec] rounded-2xl p-4 md:p-6 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300">
               <span className="text-3xl mb-4" aria-hidden="true">{card.icon}</span>
               <h3 className="font-bold text-[#326750] mb-3 leading-snug">{card.title}</h3>
               <p className="text-sm text-zinc-700 leading-relaxed">{card.text}</p>

@@ -18,7 +18,7 @@ export default function Navbar() {
               width={120}
               height={32}
               priority
-              className="w-auto h-auto object-contain"
+              className="w-auto h-auto max-h-8 md:max-h-10 object-contain"
             />
             <span className="sr-only">DPOC</span>
           </Link>
