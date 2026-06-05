@@ -1,12 +1,12 @@
 import React from 'react';
 const treatmentData = [
   {
-    icon: '💊', 
+    icon: '💊',
     title: 'Uso de medicamentos',
     description: 'Os inaladores ("bombinhas") dilatam as vias respiratórias e facilitam a passagem do ar. O uso correto desses dispositivos é essencial para a eficácia do tratamento.',
   },
   {
-    icon: '🏋️', 
+    icon: '🏋️',
     title: 'Reabilitação pulmonar',
     description: 'Exercícios supervisionados e técnicas respiratórias que auxiliam na melhora da capacidade pulmonar, resistência física e qualidade de vida.',
   },
@@ -31,23 +31,23 @@ interface TreatmentCardProps {
 
 const TreatmentCard: React.FC<TreatmentCardProps> = ({ stepNumber, icon, title, description }) => {
   return (
-    <article 
+    <article
       className="bg-[#EDF9EF] border border-green-400 rounded-xl p-6 flex flex-col justify-start transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#D8F3DC]"
     >
       {/* Número Grande (Step) */}
-      <span 
-        aria-hidden="true" 
+      <span
+        aria-hidden="true"
         className="text-green-500 font-sans text-3xl md:text-4xl font-light mb-4 block"
       >
         {stepNumber}
       </span>
-      
+
       {/* Título com Ícone embutido (inline) */}
       <h3 className="text-green-500 font-bold text-base md:text-lg mb-2 font-poppins flex items-center gap-2">
         <span aria-hidden="true" className="text-lg md:text-xl">{icon}</span>
         {title}
       </h3>
-      
+
       {/* Descrição */}
       <p className="text-gray-800 font-poppins text-sm md:text-base leading-relaxed">
         {description}
@@ -59,8 +59,8 @@ const TreatmentCard: React.FC<TreatmentCardProps> = ({ stepNumber, icon, title, 
 export default function TreatmentSection() {
   return (
     <section className="w-full py-16 md:py-24 bg-[#f4f9f6]">
-      <div className="max-w-6xl w-4/5 mx-auto flex flex-col gap-10 md:gap-12">
-        
+      <div className="flex flex-col mx-auto w-full max-w-7xl px-6 gap-10 md:gap-12">
+
         {/* Cabeçalho */}
         <header className="flex flex-col text-center md:text-left items-center md:items-start">
           <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
@@ -77,7 +77,7 @@ export default function TreatmentSection() {
         {/* Grid de Cards: 1 coluna no celular, 2 colunas no desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
           {treatmentData.map((item, index) => (
-            <TreatmentCard 
+            <TreatmentCard
               key={index}
               stepNumber={index + 1}
               icon={item.icon}

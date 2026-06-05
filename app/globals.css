@@ -65,7 +65,7 @@ body {
 }
 
 .dark .bg-white {
-  background-color: #1e3a50 !important;
+  background-color: #1e3a50;
 }
 
 /* Card hover */
@@ -103,10 +103,7 @@ body {
   color: #d0d0d0 !important;
 }
 
-/* Green background elements (header, accordion buttons) */
-.dark .bg-dpoc-green {
-  background-color: #2d5a47 !important;
-}
+/* Green background elements (accordion buttons, custom classes) */
 
 .dark .bg-\[\#326750\] {
   background-color: #2d5a47 !important;
@@ -210,18 +207,42 @@ body {
 .btn-dpoc {
   background: var(--dpoc-green);
   color: white;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.btn-dpoc:focus-visible {
+  box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.4);
+}
+
+.btn-dpoc:hover {
+  background-color: #166534 !important;
+  /* tailwind's green-800 */
+  transform: scale(1.05);
 }
 
 .btn-dpoc-outline {
   border: 2px solid var(--dpoc-green);
   color: var(--dpoc-green);
   background: transparent;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.btn-dpoc-outline:focus-visible {
+  box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.4);
+}
+
+.btn-dpoc-outline:hover {
+  background-color: #D8F3DC;
+  color: #285340;
+  transform: scale(1.05);
 }
 
 /* Hero title typography */
 .hero-title {
-  font-family: "Science Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  font-size: 48px;
+  font-family: var(--font-science-gothic), "Science Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: clamp(2rem, 5vw + 1rem, 3rem);
   line-height: 1.2;
   letter-spacing: 0px;
   font-weight: 400;

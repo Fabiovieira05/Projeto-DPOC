@@ -12,24 +12,24 @@ export default function CuidadoIntegral() {
 
   return (
     <section className="w-full">
-      <div className="mx-auto w-full max-w-7xl px-6 py-16">
-        <div className="w-full text-left mb-10">
-          <p className="text-sm font-semibold text-dpoc-green">
+      <div className="flex flex-col mx-auto w-full max-w-7xl px-6 py-16 gap-10 md:gap-12">
+        <header className="flex flex-col text-center md:text-left items-center md:items-start w-full">
+          <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
             Cuidado integral
-          </p>
-          <h2 className="hero-title mt-2 text-4xl text-[#326750] leading-tight w-full">
+          </span>
+          <h2 className="text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans leading-tight w-full">
             Cuidados de Enfermagem e promoção da saúde
           </h2>
 
-          <div className="mt-6 flex flex-col gap-4 text-zinc-700 text-base md:text-lg w-full">
+          <div className="flex flex-col h-full text-sm md:text-xl leading-relaxed gap-6 text-grey-900 font-poppins w-full">
             <p>A enfermagem possui papel fundamental na prevenção, orientação e acompanhamento de pacientes com DPOC. Os profissionais atuam diretamente na educação em saúde, incentivo ao autocuidado, orientação sobre o uso correto de medicamentos, prevenção de complicações e fortalecimento da adesão ao tratamento.</p>
             <p>Além disso, o suporte emocional e a orientação familiar ajudam na melhora da qualidade de vida e no enfrentamento das limitações causadas pela doença.</p>
           </div>
-        </div>
+        </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {cuidadosCards.map((card, index) => (
-            <div key={index} className="bg-[#e8f1ec] rounded-2xl p-6 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300">
+            <div key={index} className="bg-[#EDF9EF] border border-green-400 rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#D8F3DC]">
               <span className="text-3xl mb-4" role="img" aria-label={card.alt}>{card.icon}</span>
               <h3 className="font-bold text-[#326750] mb-3 leading-snug">{card.title}</h3>
               <p className="text-sm text-zinc-700 leading-relaxed">{card.text}</p>

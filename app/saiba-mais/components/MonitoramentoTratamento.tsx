@@ -2,23 +2,23 @@ import Accordion from "../../components/Accordion";
 
 export default function MonitoramentoTratamento() {
     return (
-        <section className="w-full">
-            <div className="mx-auto w-full max-w-7xl px-6 py-16">
-                <div className="w-full text-left">
-                    <p className="text-sm font-semibold text-dpoc-green">
+        <section className="w-full py-16 md:py-24 bg-white dark:!bg-[#292929]">
+            <div className="flex flex-col mx-auto w-full max-w-7xl px-6 gap-10 md:gap-12">
+                <header className="flex flex-col text-center md:text-left items-center md:items-start">
+                    <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
                         Cuide da sua saúde
-                    </p>
-                    <h2 className="hero-title mt-2 text-4xl text-[#326750]">
+                    </span>
+                    <h2 className="text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
                         Monitoramento e adesão ao tratamento
                     </h2>
-                    <p className="mt-4 text-zinc-700 text-base md:text-lg w-full">
+                    <p className="flex flex-col h-full text-sm md:text-xl leading-relaxed gap-6 text-grey-900 font-poppins">
                         O acompanhamento contínuo do paciente com DPOC é fundamental para controlar a evolução da
                         doença e prevenir complicações. Consultas médicas regulares, exames de função pulmonar e avaliação
                         dos sintomas ajudam no ajuste do tratamento e na identificação precoce de agravamentos.
                     </p>
-                </div>
+                </header>
 
-                <div className="mt-8 w-full">
+                <div className="w-full">
                     <Accordion
                         items={[
                             {

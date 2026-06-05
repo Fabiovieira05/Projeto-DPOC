@@ -11,10 +11,10 @@ const INTEGRANTES = [
 ];
 
 const DESENVOLVEDORES = [
-    { name: "Artur Fernandes Galdino", image: null },
-    { name: "Fábio Alessandro Santos Vieira", image: "/team/Fabio.png" },
-    { name: "Giovani de Oliveira Teodoro Coelho", image: null },
-    { name: "Yasmim de Souza Santos", image: null },
+    { name: "Artur Fernandes Galdino", image: "https://github.com/ArturFGaldino.png", githubUrl: "https://github.com/ArturFGaldino" },
+    { name: "Fábio Alessandro Santos Vieira", image: "/team/Fabio.png", githubUrl: "https://github.com/Fabiovieira05" },
+    { name: "Giovani de Oliveira Teodoro Coelho", image: "https://github.com/Gotc2607.png", githubUrl: "https://github.com/Gotc2607" },
+    { name: "Yasmim de Souza Santos", image: "/team/Yasmim.jpeg", githubUrl: "https://github.com/eii-yahs" },
 ];
 
 const REFERENCIAS_BIBLIOGRAFICAS = [
@@ -54,14 +54,16 @@ const REFERENCIAS_BIBLIOGRAFICAS = [
 ];
 
 // 2. Componente reutilizável e isolado
-function TeamMember({ name, image }: { name: string; image: string | null }) {
-    return (
-        <li className="flex flex-col items-center text-center w-full">
+function TeamMember({ name, image, githubUrl }: { name: string; image: string | null; githubUrl?: string }) {
+    const isClickable = !!githubUrl;
+
+    const content = (
+        <li className={`flex flex-col items-center text-center w-full ${isClickable ? 'group cursor-pointer' : ''}`}>
             <figure
-                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-full overflow-hidden border border-grey-800 bg-transparent relative flex-shrink-0"
+                className={`w-40 h-40 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-4 sm:mb-3 rounded-full overflow-hidden border border-grey-800 bg-transparent relative flex-shrink-0 transition-transform duration-300 ${isClickable ? 'group-hover:scale-110 group-hover:border-green-500 group-hover:shadow-md' : ''}`}
                 aria-hidden={!image}
             >
-                {image && (
+                {image ? (
                     <Image
                         src={image}
                         alt={`Avatar de ${name}`}
@@ -69,13 +71,27 @@ function TeamMember({ name, image }: { name: string; image: string | null }) {
                         className="object-cover"
                         sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                     />
+                ) : (
+                    <div className="w-full h-full bg-stone-200 flex items-center justify-center">
+                        <span className="text-3xl text-stone-400">👤</span>
+                    </div>
                 )}
             </figure>
-            <h3 className="font-poppins text-xs sm:text-sm md:text-base font-medium text-grey-800 leading-tight">
+            <h3 className={`font-poppins text-lg sm:text-sm md:text-base font-medium text-grey-800 leading-tight transition-colors duration-300 ${isClickable ? 'group-hover:text-green-500' : ''}`}>
                 {name}
             </h3>
         </li>
     );
+
+    if (githubUrl) {
+        return (
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="w-full outline-none focus-visible:ring-2 focus-visible:ring-green-500 rounded-lg" aria-label={`Perfil do GitHub de ${name}`}>
+                {content}
+            </a>
+        );
+    }
+
+    return content;
 }
 
 // 3. Estrutura principal da Página
@@ -89,8 +105,8 @@ export default function SobreNos() {
                     Integrantes
                 </h2>
 
-                {/* Grid: 2 no mobile, 3 no tablet, 6 no desktop */}
-                <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-8 place-items-center">
+                {/* Grid: 1 no mobile, 3 no tablet, 6 no desktop */}
+                <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-8 place-items-center">
                     {INTEGRANTES.map((person) => (
                         <TeamMember key={person.name} {...person} />
                     ))}
@@ -103,8 +119,8 @@ export default function SobreNos() {
                     Desenvolvedores
                 </h2>
 
-                {/* Flexbox para centralizar itens irregulares (4 itens) */}
-                <ul className="grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-8 place-items-center">
+                {/* Grid: 1 no mobile, 2 ou 4 para maiores */}
+                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8 place-items-center">
                     {DESENVOLVEDORES.map((person) => (
                         <TeamMember key={person.name} {...person} />
                     ))}

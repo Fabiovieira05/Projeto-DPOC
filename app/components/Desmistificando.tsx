@@ -3,21 +3,21 @@ import Accordion from "./Accordion";
 export default function Desmistificando() {
   return (
     <section className="w-full">
-      <div className="mx-auto w-full max-w-7xl px-6 py-16">
-        <div className="w-full text-left">
-          <p className="text-sm font-semibold text-dpoc-green">
+      <div className="flex flex-col mx-auto w-full max-w-7xl px-6 py-16 gap-10 md:gap-12">
+        <header className="flex flex-col text-center md:text-left items-center md:items-start w-full">
+          <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
             Desmistificando
-          </p>
-          <h2 className="hero-title mt-2 text-4xl text-[#326750]">
+          </span>
+          <h2 className="text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
             Mitos e verdades
           </h2>
-          <p className="mt-4 text-zinc-700 text-base md:text-lg w-full">
+          <p className="flex flex-col h-full text-sm md:text-xl leading-relaxed gap-6 text-grey-900 font-poppins">
             Existem muitos equívocos sobre a DPOC que podem atrasar o diagnóstico e prejudicar o
             tratamento. Clique em cada afirmação para descobrir a verdade.
           </p>
-        </div>
+        </header>
 
-        <div className="mt-8 w-full">
+        <div className="w-full">
           <Accordion
             items={[
               { title: "Só fumantes desenvolvem DPOC", content: "Resposta: Não. Embora o tabagismo seja o fator de risco mais importante, DPOC pode ocorrer em não fumantes por exposições ocupacionais, poluição e fatores genéticos." },

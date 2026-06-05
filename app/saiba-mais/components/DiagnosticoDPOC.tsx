@@ -2,7 +2,7 @@ import React from 'react';
 
 const diagnosisData = [
   {
-    icon: '🩺', 
+    icon: '🩺',
     title: 'Anamnese e histórico clínico',
     description: 'Avaliação de sintomas, tempo de tabagismo, exposições ocupacionais e histórico familiar de doenças respiratórias.',
   },
@@ -51,17 +51,17 @@ const DiagnosisListItem: React.FC<DiagnosisListItemProps> = ({ title, descriptio
 export default function DiagnosticoDpoc() {
   return (
     <section className="w-full min-h-dvh flex flex-col justify-center py-12 md:min-h-0 md:block md:py-24 bg-[#f4f9f6]">
-      <div className="max-w-6xl w-[90%] md:w-4/5 mx-auto flex flex-col gap-8 md:gap-12">
-        
+      <div className="flex flex-col mx-auto w-full max-w-7xl px-6 gap-8 md:gap-12">
+
         <header className="flex flex-col text-center md:text-left items-center md:items-start">
           <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
             Como é feito
           </span>
-          
+
           <h2 className="text-green-500 text-4xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
             Diagnóstico
           </h2>
-          
+
           {/* Parágrafos centralizados no mobile */}
           <div className="flex flex-col text-center md:text-left h-full text-base md:text-lg lg:text-xl leading-relaxed gap-4 md:gap-6 text-gray-900 font-poppins">
             <p>
@@ -75,11 +75,11 @@ export default function DiagnosticoDpoc() {
 
         <ul className="flex flex-col gap-6 md:gap-8 mt-4 md:mt-0">
           {diagnosisData.map((item, index) => (
-            <DiagnosisListItem 
-              key={index} 
-              icon={item.icon} 
-              title={item.title} 
-              description={item.description} 
+            <DiagnosisListItem
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
             />
           ))}
         </ul>

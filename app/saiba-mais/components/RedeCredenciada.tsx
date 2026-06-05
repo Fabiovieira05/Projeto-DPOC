@@ -40,7 +40,7 @@ export default function RedeCredenciada() {
 
     return (
         <section className="w-full py-16 md:py-24 bg-[#f4f9f6]">
-            <div className="max-w-6xl w-4/5 mx-auto flex flex-col gap-10 md:gap-12">
+            <div className="flex flex-col mx-auto w-full max-w-7xl px-6 gap-10 md:gap-12">
 
                 {/* Cabeçalho */}
                 <header className="flex flex-col text-center md:text-left items-center md:items-start">

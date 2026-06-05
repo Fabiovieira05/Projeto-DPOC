@@ -18,39 +18,32 @@ const statsData = [
 
 export default function StatsBanner() {
   return (
-    /* w-full preenche a tela toda. 
-      bg-[#EEF3EF] é uma aproximação visual do tom cinza/esverdeado do design. 
-    */
     <section className="w-full stats-banner-bg py-12 md:py-16">
+      <div className="max-w-7xl px-6 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left">        {statsData.map((stat, index) => (
+        <article
+          key={index}
+          className={`flex flex-col items-center sm:items-start text-center sm:text-left ${index === 0 ? 'sm:justify-self-start' :
+            index === 1 ? 'sm:justify-self-center' :
+              'sm:justify-self-end'
+            }`}
+          aria-label={`${stat.value} ${stat.description.replace('\n', ' ')}`}
+        >
 
-
-      <div className="max-w-6xl w-4/5 mx-auto grid grid-cols-3 gap-2 md:gap-8">
-
-        {statsData.map((stat, index) => (
-          <article
-            key={index}
-            className={`flex flex-col items-start text-left ${index === 0 ? 'justify-self-start items-start text-left' :
-                index === 1 ? 'justify-self-center items-center text-center ' :
-                  'justify-self-end items-start text-left'
-              }`}
-            aria-label={`${stat.value} ${stat.description.replace('\n', ' ')}`}
+          <span
+            aria-hidden="true"
+            className="text-green-500 font-sans text-xl sm:text-2xl md:text-3xl lg:text-5xl mb-1 md:mb-2 tracking-wide"
           >
+            {stat.value}
+          </span>
 
-            <span
-              aria-hidden="true"
-              className="text-green-500 font-sans text-2xl sm:text-4xl md:text-5xl lg:text-6xl mb-1 md:mb-2 tracking-wide"
-            >
-              {stat.value}
-            </span>
-
-            <p
-              aria-hidden="true"
-              className="text-gray-800 font-poppins text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-snug whitespace-pre-line"
-            >
-              {stat.description}
-            </p>
-          </article>
-        ))}
+          <p
+            aria-hidden="true"
+            className="text-gray-800 font-poppins text-xs sm:text-sm md:text-base font-medium leading-relaxed whitespace-pre-line"
+          >
+            {stat.description}
+          </p>
+        </article>
+      ))}
 
       </div>
     </section>
