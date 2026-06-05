@@ -1,13 +1,47 @@
 @import "tailwindcss";
 
-@theme {
-  --color-green-100: #F3FBF4;
-  --color-green-200: #EDF9EF;
-  --color-green-400: #578872;
-  --color-green-500: #2D6A4F;
-  --color-green-800: #193A2B;
-  --color-grey-800: #292926;
-  --color-blue-400: #66A789;
-  --font-sans: var(--font-science-gothic), sans-serif;
-  --font-poppins: var(--font-poppins), sans-serif;
+:root {
+  --background: #f4f9f6;
+  --foreground: #171717;
+  --dpoc-green: #5b8b78;
+  --dpoc-green-dark: #3f6b56;
 }
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* removed dark theme override to keep site in light theme like the design */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* small helpers used by the Home hero */
+.bg-dpoc-green { background-color: var(--dpoc-green); }
+.text-dpoc-green { color: var(--dpoc-green); }
+.btn-dpoc {
+  background: var(--dpoc-green);
+  color: white;
+}
+.btn-dpoc-outline {
+  border: 2px solid var(--dpoc-green);
+  color: var(--dpoc-green);
+  background: transparent;
+}
+
+/* Hero title typography (Science Gothic: size 48, line-height 120%, letter-spacing 0) */
+.hero-title {
+  font-family: "Science Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: 48px;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0px;
+  font-weight: 800;
+}
+
+

@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Science_Gothic, Poppins } from "next/font/google";
+import Navbar from "./components/Navbar";
 
 const scienceGothic = Science_Gothic({
   subsets: ["latin"],
@@ -20,8 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${scienceGothic.variable} ${poppins.variable}`}>
-      <body className="antialiased">
+    <html
+      lang="pt-BR"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        <Navbar />
         {children}
       </body>
     </html>
