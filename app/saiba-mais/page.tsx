@@ -5,6 +5,7 @@ import SintomasDpoc from './components/SintomasDPOC';
 import DiagnosticoDpoc from './components/DiagnosticoDPOC';
 import TratamentoDpoc from './components/TratamentoDPOC';
 import MonitoramentoTratamento from './components/MonitoramentoTratamento';
+import PrevencaoDpoc from './components/PrevencaoDpoc';
 
 export default function SaibaMaisPage() {
   return (
@@ -15,6 +16,7 @@ export default function SaibaMaisPage() {
       <DiagnosticoDpoc />
       <TratamentoDpoc />
       <MonitoramentoTratamento />
+      <PrevencaoDpoc />
     </main>
   );
 }
