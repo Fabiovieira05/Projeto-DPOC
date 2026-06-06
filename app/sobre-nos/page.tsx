@@ -59,9 +59,9 @@ function TeamMember({ name, image, githubUrl }: { name: string; image: string | 
     const isClickable = !!githubUrl;
 
     const content = (
-        <li className={`flex flex-col items-center text-center w-full ${isClickable ? 'group cursor-pointer' : ''}`}>
+        <li className={`flex flex-col items-center text-center w-full h-full ${!githubUrl ? '' : 'group cursor-pointer'}`}>
             <figure
-                className={`w-40 h-40 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-4 sm:mb-3 rounded-full overflow-hidden border border-grey-800 bg-transparent relative flex-shrink-0 transition-transform duration-300 ${isClickable ? 'group-hover:scale-110 group-hover:border-green-500 group-hover:shadow-md' : ''}`}
+                className={`w-36 h-36 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-4 sm:mb-3 rounded-full overflow-hidden border-2 bg-transparent relative flex-shrink-0 transition-transform duration-300 ${isClickable ? 'border-grey-800 group-hover:scale-105 group-hover:border-green-500 group-hover:shadow-[0_4px_15px_rgba(34,197,94,0.25)]' : 'border-grey-800'}`}
                 aria-hidden={!image}
             >
                 {image ? (
@@ -69,8 +69,8 @@ function TeamMember({ name, image, githubUrl }: { name: string; image: string | 
                         src={image}
                         alt={`Avatar de ${name}`}
                         fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
+                        className={`object-cover ${isClickable ? 'transition-transform duration-500 group-hover:scale-110' : ''}`}
+                        sizes="(max-width: 640px) 144px, (max-width: 768px) 112px, 128px"
                     />
                 ) : (
                     <div className="w-full h-full bg-stone-200 flex items-center justify-center">
@@ -78,15 +78,25 @@ function TeamMember({ name, image, githubUrl }: { name: string; image: string | 
                     </div>
                 )}
             </figure>
-            <h3 className={`font-poppins text-lg sm:text-sm md:text-base font-medium text-grey-800 leading-tight transition-colors duration-300 ${isClickable ? 'group-hover:text-green-500' : ''}`}>
+
+            <h3 className={`font-poppins flex-grow flex items-center justify-center w-full px-1 text-lg sm:text-sm md:text-base font-medium text-grey-800 leading-tight transition-colors duration-300 ${isClickable ? 'group-hover:text-green-500' : ''}`}>
                 {name}
             </h3>
+
+            {githubUrl && (
+                <div className="mt-3.5 sm:mt-3 flex items-center gap-2 px-5 py-3 sm:px-4 sm:py-1.5 bg-green-500 text-white rounded-md text-base sm:text-sm md:text-base font-semibold transition-all duration-300 shadow-sm group-hover:bg-green-800 group-hover:-translate-y-1 group-hover:shadow-[0_4px_12px_rgba(34,197,94,0.4)]">
+                    <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-4 sm:h-4 md:w-5 md:h-5" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.26c3.1-.3 6.3-1.5 6.3-6.74a4.8 4.8 0 0 0-1.3-3.2 4.8 4.8 0 0 0-.1-3.1s-1-.3-3.3 1.2a11.5 11.5 0 0 0-6 0C7.3 1.5 6.3 1.5 6.3 1.5a4.8 4.8 0 0 0-.1 3.1 4.8 4.8 0 0 0-1.3 3.2c0 5.2 3.2 6.4 6.3 6.74a4.8 4.8 0 0 0-1 3.06v4" />
+                    </svg>
+                    <span>GitHub</span>
+                </div>
+            )}
         </li>
     );
 
     if (githubUrl) {
         return (
-            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="w-full outline-none focus-visible:ring-2 focus-visible:ring-green-500 rounded-lg" aria-label={`Perfil do GitHub de ${name}`}>
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="w-full h-full block outline-none focus-visible:ring-2 focus-visible:ring-green-500 rounded-lg" aria-label={`Perfil do GitHub de ${name}`}>
                 {content}
             </a>
         );
@@ -108,7 +118,7 @@ export default function SobreNos() {
                     </h2>
 
                     {/* Grid: 1 no mobile, 3 no tablet, 6 no desktop */}
-                    <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-8 place-items-center">
+                    <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-8 justify-items-center items-stretch">
                         {INTEGRANTES.map((person) => (
                             <TeamMember key={person.name} {...person} />
                         ))}
@@ -124,7 +134,7 @@ export default function SobreNos() {
                     </h2>
 
                     {/* Grid: 1 no mobile, 2 ou 4 para maiores */}
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8 place-items-center">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8 justify-items-center items-stretch">
                         {DESENVOLVEDORES.map((person) => (
                             <TeamMember key={person.name} {...person} />
                         ))}
