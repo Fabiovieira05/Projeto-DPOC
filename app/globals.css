@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 :root {
+  /* ── Base ── */
   --background: #f4f9f6;
   --foreground: #171717;
   --dpoc-green: #5b8b78;
   --dpoc-green-dark: #3f6b56;
+
+  /* ── Palette (consumed by Tailwind via @theme) ── */
   --color-green-50: #D8F3DC;
   --color-green-100: #F3FBF4;
   --color-green-200: #EDF9EF;
@@ -13,6 +16,59 @@
   --color-green-800: #193A2B;
   --color-grey-800: #292926;
   --color-blue-400: #66A789;
+
+  /* ── Semantic tokens (light) ── */
+  --surface-page: #f4f9f6;
+  --surface-section: #f4f9f6;
+  --surface-card: #EDF9EF;
+  --surface-card-hover: #D8F3DC;
+  --surface-stats: #EAF0ED;
+  --surface-accordion: #D8F3DC;
+  --surface-footer: #1e3a2b;
+
+  --text-primary: #171717;
+  --text-secondary: #292926;
+  --text-accent: #2D6A4F;
+  --text-accent-light: #578872;
+
+  --border-default: #193A2B;
+  --border-accent: #578872;
+
+  --btn-accordion-bg: #326750;
+  --btn-accordion-hover: #285340;
+}
+
+.dark {
+  --background: #292929;
+  --foreground: #e0e0e0;
+
+  --surface-page: #292929;
+  --surface-section: #292929;
+  --surface-card: #2a4a3e;
+  --surface-card-hover: #345a4d;
+  --surface-stats: #1F1F1D;
+  --surface-accordion: #2a4a3e;
+  --surface-footer: #1e3a2b;
+
+  --color-green-50: #2a4a3e;
+  --color-green-100: #292926;
+  --color-green-200: #2a4a3e;
+  --color-green-400: #6aaf8a;
+  --color-green-500: #7abf9a;
+  --color-green-800: #4a7a6a;
+  --color-grey-800: #d0d0d0;
+  --color-blue-400: #66A789;
+
+  --text-primary: #e0e0e0;
+  --text-secondary: #d0d0d0;
+  --text-accent: #7abf9a;
+  --text-accent-light: #6aaf8a;
+
+  --border-default: #4a7a6a;
+  --border-accent: #4a7a6a;
+
+  --btn-accordion-bg: #2d5a47;
+  --btn-accordion-hover: #1e4a37;
 }
 
 @theme inline {
@@ -30,45 +86,38 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ===== DARK MODE ===== */
-.dark {
-  --background: #292929;
-  --foreground: #e0e0e0;
-}
+/* ===== DARK MODE — Semantic overrides via variables (zero !important) ===== */
 
-/* Body & page backgrounds */
+/* Page-level backgrounds */
 .dark body,
 .dark .min-h-screen {
-  background-color: #292929 !important;
-  color: #e0e0e0;
+  background-color: var(--surface-page);
+  color: var(--foreground);
 }
 
-/* Section backgrounds */
 .dark section,
 .dark main {
-  background-color: #292929 !important;
+  background-color: var(--surface-section);
 }
 
-/* Specific section bg overrides */
+/* Specific utility-class bg overrides */
 .dark .bg-\[\#f4f9f5\],
 .dark .bg-\[\#f4f9f6\],
 .dark .bg-\[\#F3FBF4\],
 .dark .bg-\[\#EAF0ED\] {
-  background-color: #292929 !important;
+  background-color: var(--surface-page);
 }
 
 /* Cards */
 .dark .bg-\[\#EDF9EF\],
 .dark .bg-\[\#e8f1ec\] {
-  background-color: #2a4a3e !important;
-  border-color: #4a7a6a !important;
+  background-color: var(--surface-card);
+  border-color: var(--border-default);
 }
-
-
 
 /* Card hover */
 .dark .hover\:bg-\[\#D8F3DC\]:hover {
-  background-color: #345a4d !important;
+  background-color: var(--surface-card-hover);
 }
 
 /* Text colors */
@@ -78,98 +127,87 @@ body {
 .dark .text-zinc-700,
 .dark .text-zinc-900,
 .dark .text-gray-800\/90 {
-  color: #d0d0d0 !important;
+  color: var(--text-secondary);
 }
 
 .dark .text-\[\#0f1720\] {
-  color: #e8e8e8 !important;
+  color: #e8e8e8;
 }
 
 .dark .text-\[\#326750\] {
-  color: #7abf9a !important;
+  color: var(--text-accent);
 }
 
 .dark .text-green-500 {
-  color: #7abf9a !important;
+  color: var(--text-accent);
 }
 
 .dark .text-green-400 {
-  color: #6aaf8a !important;
+  color: var(--text-accent-light);
 }
 
 .dark .text-grey-800 {
-  color: #d0d0d0 !important;
+  color: var(--text-secondary);
 }
 
-/* Green background elements (accordion buttons, custom classes) */
-
+/* Accordion buttons */
 .dark .bg-\[\#326750\] {
-  background-color: #2d5a47 !important;
+  background-color: var(--btn-accordion-bg);
 }
 
 .dark .hover\:bg-\[\#285340\]:hover {
-  background-color: #1e4a37 !important;
+  background-color: var(--btn-accordion-hover);
 }
 
-/* Footer — mantém o mesmo verde escuro nos dois temas */
+/* Footer */
 .dark .bg-\[\#1e3a2b\] {
-  background-color: #1e3a2b !important;
+  background-color: var(--surface-footer);
 }
 
 /* Accordion open panel */
 .dark [style*="background-color: rgb(216, 243, 220)"],
 .dark [style*="backgroundColor"] {
-  background-color: #2a4a3e !important;
+  background-color: var(--surface-accordion);
 }
 
-/* Border overrides */
+/* Borders */
 .dark .border-green-400 {
-  border-color: #4a7a6a !important;
+  border-color: var(--border-default);
 }
 
 .dark .border-\[\#326750\] {
-  border-color: #4a7a6a !important;
+  border-color: var(--border-default);
 }
 
 .dark .border-green-800 {
-  border-color: #4a7a6a !important;
+  border-color: var(--border-default);
 }
 
 /* Diagnosis circle icons */
 .dark .bg-green-100 {
-  background-color: #2a4a3e !important;
-}
-
-/* Stats banner */
-.dark .bg-\[\#EAF0ED\] {
-  background-color: #16213e !important;
-}
-
-/* Sobre nos page background */
-.dark .bg-\[\#F3FBF4\] {
-  background-color: #292926 !important;
+  background-color: var(--surface-card);
 }
 
 /* Avatar border */
 .dark .border-grey-800 {
-  border-color: #4a7a6a !important;
+  border-color: var(--border-default);
 }
 
 /* Hero buttons */
 .dark .btn-dpoc {
-  background: #2d5a47;
+  background: var(--btn-accordion-bg);
   color: white;
 }
 
 .dark .btn-dpoc-outline {
-  border-color: #7abf9a;
-  color: #7abf9a;
+  border-color: var(--text-accent);
+  color: var(--text-accent);
 }
 
 /* Rede credenciada tag badges */
 .dark .border-green-400.rounded-full {
-  border-color: #6aaf8a !important;
-  color: #6aaf8a !important;
+  border-color: var(--text-accent-light);
+  color: var(--text-accent-light);
 }
 
 /* ===== END DARK MODE ===== */
@@ -180,8 +218,8 @@ body {
 }
 
 .dark .accordion-panel-bg {
-  background-color: #D8F3DC !important;
-  color: #292926 !important;
+  background-color: #D8F3DC;
+  color: #292926;
 }
 
 /* StatsBanner background */
@@ -190,7 +228,7 @@ body {
 }
 
 .dark .stats-banner-bg {
-  background-color: #1F1F1D !important;
+  background-color: var(--surface-stats);
 }
 
 /* small helpers used by the Home hero */
@@ -214,7 +252,7 @@ body {
 }
 
 .btn-dpoc:hover {
-  background-color: #166534 !important;
+  background-color: #166534;
   /* tailwind's green-800 */
   transform: scale(1.05);
 }
@@ -237,9 +275,8 @@ body {
   transform: scale(1.05);
 }
 
-/* Hero title typography */
 .hero-title {
-  font-family: var(--font-science-gothic), "Science Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-family: var(--font-science-gothic), sans-serif;
   font-size: clamp(2rem, 5vw + 1rem, 3rem);
   line-height: 1.2;
   letter-spacing: 0px;

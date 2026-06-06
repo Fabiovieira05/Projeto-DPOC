@@ -11,15 +11,15 @@ import ScrollReveal from '../components/ScrollReveal';
 
 export default function SaibaMaisPage() {
   return (
-    <main className="min-h-screen bg-[#f4f9f5]">
-      <ScrollReveal><IntroducaoDpoc /></ScrollReveal>
-      <ScrollReveal><StatsBanner /></ScrollReveal>
-      <ScrollReveal><SintomasDpoc /></ScrollReveal>
-      <ScrollReveal><DiagnosticoDpoc /></ScrollReveal>
-      <ScrollReveal><TratamentoDpoc /></ScrollReveal>
-      <ScrollReveal><MonitoramentoTratamento /></ScrollReveal>
-      <ScrollReveal><PrevencaoDpoc /></ScrollReveal>
-      <ScrollReveal><RedeCredenciada /></ScrollReveal>
+    <main id="main-content" className="min-h-screen bg-[#f4f9f5]">
+      <div id="introducao"><ScrollReveal><IntroducaoDpoc /></ScrollReveal></div>
+      <div id="estatisticas"><ScrollReveal><StatsBanner /></ScrollReveal></div>
+      <div id="sintomas"><ScrollReveal><SintomasDpoc /></ScrollReveal></div>
+      <div id="diagnostico"><ScrollReveal><DiagnosticoDpoc /></ScrollReveal></div>
+      <div id="tratamento"><ScrollReveal><TratamentoDpoc /></ScrollReveal></div>
+      <div id="monitoramento"><ScrollReveal><MonitoramentoTratamento /></ScrollReveal></div>
+      <div id="prevencao"><ScrollReveal><PrevencaoDpoc /></ScrollReveal></div>
+      <div id="rede"><ScrollReveal><RedeCredenciada /></ScrollReveal></div>
     </main>
   );
 }

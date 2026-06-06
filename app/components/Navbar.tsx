@@ -2,20 +2,38 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useTheme } from "./ThemeProvider";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
-  // Função que procura o botão original do VLibras e simula um clique nele
-  const handleOpenVLibras = () => {
-    const defaultButton = document.querySelector('[vw-access-button]') as HTMLElement;
-    if (defaultButton) {
-      defaultButton.click();
+  // Usa MutationObserver para aguardar o widget VLibras estar montado antes de clicar.
+  // Mais idiomático que polling: reage ao DOM sem temporizadores cegos.
+  const handleOpenVLibras = useCallback(() => {
+    const btn = document.querySelector('[vw-access-button]') as HTMLElement | null;
+    if (btn) {
+      btn.click();
+      return;
     }
-  };
+
+    // Widget ainda não montou — observa o DOM até aparecer (timeout de 3s)
+    const observer = new MutationObserver((_mutations, obs) => {
+      const el = document.querySelector('[vw-access-button]') as HTMLElement | null;
+      if (el) {
+        obs.disconnect();
+        el.click();
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Segurança: desconecta após 3s para não ficar observando eternamente
+    setTimeout(() => {
+      observer.disconnect();
+    }, 3000);
+  }, []);
 
   return (
     <header className="w-full bg-dpoc-green sticky top-0 z-50">
@@ -78,6 +96,7 @@ export default function Navbar() {
           <button
             onClick={handleOpenVLibras}
             className="hidden md:inline-flex rounded-md bg-green-500 px-6 py-2 text-white hover:bg-green-800 transition-colors font-bold cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-white"
+            aria-label="Abrir ferramenta de tradução em Libras"
           >
             VLibras
           </button>
@@ -85,7 +104,8 @@ export default function Navbar() {
           <button
             className="md:hidden p-2 text-white outline-none focus-visible:ring-2 focus-visible:ring-white rounded-md text-3xl font-bold leading-none cursor-pointer"
             onClick={() => setOpen((s) => !s)}
-            aria-label="abrir menu"
+            aria-label={open ? "fechar menu" : "abrir menu"}
+            aria-expanded={open}
           >
             ☰
           </button>
@@ -102,6 +122,9 @@ export default function Navbar() {
       {/* Painel lateral direito */}
       <div
         className={`fixed inset-y-0 right-0 z-50 w-64 md:w-80 bg-[#5b8b78] h-full shadow-2xl flex flex-col p-8 pt-12 transform transition-transform duration-300 ease-in-out md:hidden ${open ? 'translate-x-0' : 'translate-x-full'}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu de navegação"
       >
 
         {/* Botão Fechar (X) */}
