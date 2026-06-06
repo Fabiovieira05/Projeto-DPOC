@@ -19,8 +19,8 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
                 }
             },
             {
-                threshold: 0.20, // Reveal triggers when 20% of element is visible
-                rootMargin: "0px 0px -50px 0px"
+                threshold: 0, // Ignora proporção de altura do elemento
+                rootMargin: "0px 0px -100px 0px" // Dispara exatos 100px após tocar a base da tela
             }
         );
 
