@@ -102,7 +102,7 @@ export default function SobreNos() {
 
             {/* Seção Integrantes */}
             <ScrollReveal>
-                <section className="w-full max-w-5xl mb-16" aria-labelledby="integrantes-title">
+                <section className="w-full max-w-5xl mx-auto mb-16" aria-labelledby="integrantes-title">
                     <h2 id="integrantes-title" className="font-science-gothic text-2xl md:text-3xl  text-green-500 text-center mb-10">
                         Integrantes
                     </h2>
@@ -118,7 +118,7 @@ export default function SobreNos() {
 
             {/* Seção Desenvolvedores */}
             <ScrollReveal>
-                <section className="w-full max-w-4xl" aria-labelledby="desenvolvedores-title">
+                <section className="w-full max-w-4xl mx-auto" aria-labelledby="desenvolvedores-title">
                     <h2 id="desenvolvedores-title" className="font-science-gothic text-2xl md:text-3xl  text-green-500 text-center mb-10">
                         Desenvolvedores
                     </h2>
@@ -134,7 +134,7 @@ export default function SobreNos() {
 
             <ScrollReveal>
                 <section
-                    className="w-full max-w-5xl mt-16 pt-16"
+                    className="w-full max-w-5xl mx-auto mt-16 pt-16"
                     aria-labelledby="referencias-title"
                 >
                     <h2
@@ -143,7 +143,7 @@ export default function SobreNos() {
                     >
                         Referências
                     </h2>
-                    <ol className="list-decimal list-outside pl-5 space-y-4 font-poppins text-sm md:text-base text-grey-800 text-justify leading-relaxed break-words">
+                    <ol className="list-decimal list-outside pl-4 md:pl-5 space-y-4 font-poppins text-sm md:text-base text-grey-800 text-justify leading-relaxed break-all sm:break-words">
                         {REFERENCIAS_BIBLIOGRAFICAS.map((referencia, index) => (
                             <li key={index}>
                                 {referencia}

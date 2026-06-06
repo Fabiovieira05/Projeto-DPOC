@@ -36,7 +36,7 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
     return (
         <div
             ref={ref}
-            className={`transition-all duration-[1000ms] ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            className={`w-full transition-all duration-[1000ms] ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
         >
             {children}

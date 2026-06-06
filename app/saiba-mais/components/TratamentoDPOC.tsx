@@ -58,7 +58,7 @@ const TreatmentCard: React.FC<TreatmentCardProps> = ({ stepNumber, icon, title, 
 
 export default function TreatmentSection() {
   return (
-    <section className="w-full py-16 md:py-24 bg-[#f4f9f6]">
+    <section className="w-full py-16 md:py-24 bg-white">
       <div className="flex flex-col mx-auto w-full max-w-7xl px-6 gap-10 md:gap-12">
 
         {/* Cabeçalho */}
