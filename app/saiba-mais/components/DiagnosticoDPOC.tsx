@@ -2,6 +2,11 @@ import React from 'react';
 
 const diagnosisData = [
   {
+    icon: '📈',
+    title: 'Diagnóstico PFE',
+    description: 'A avaliação do pico de fluxo expiratório (PFE) corresponde à velocidade máxima da expiração realizada após uma inspiração profunda, sendo considerada um recurso importante no acompanhamento da asma. Os valores do PFE permitem avaliar de forma objetiva a limitação do fluxo aéreo quando a espirometria não está acessível.',
+  },
+  {
     icon: '🩺',
     title: 'Anamnese e histórico clínico',
     description: 'Avaliação de sintomas, tempo de tabagismo, exposições ocupacionais e histórico familiar de doenças respiratórias.',

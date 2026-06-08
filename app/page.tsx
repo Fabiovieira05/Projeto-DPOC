@@ -3,6 +3,7 @@ import Desmistificando from "./components/Desmistificando";
 import CuidadoIntegral from "./components/CuidadoIntegral";
 import BemEstarIntegral from "./components/BemEstarIntegral";
 import ScrollReveal from "./components/ScrollReveal";
+import ImpactBanner from "./components/ImpactBanner";
 
 export default function Home() {
   return (
@@ -10,6 +11,9 @@ export default function Home() {
       <div id="main-content" className="flex-1">
         <ScrollReveal>
           <Hero />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ImpactBanner />
         </ScrollReveal>
         <ScrollReveal>
           <Desmistificando />
