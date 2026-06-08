@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useCallback } from "react";
-import { useTheme } from "./ThemeProvider";
+import { useTheme } from "@/components/providers/theme-provider";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -57,13 +57,13 @@ export default function Navbar() {
             <Link href="/" className="hover:underline outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm px-1">
               Home
             </Link>
-            <Link href="../saiba-mais" className="hover:underline outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm px-1">
+            <Link href="/saiba-mais" className="hover:underline outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm px-1">
               Saiba mais
             </Link>
-            <Link href="../videos" className="hover:underline outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm px-1">
+            <Link href="/videos" className="hover:underline outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm px-1">
               Vídeos
             </Link>
-            <Link href="../sobre-nos" className="hover:underline outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm px-1">
+            <Link href="/sobre-nos" className="hover:underline outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm px-1">
               Sobre nós
             </Link>
           </nav>
@@ -146,13 +146,13 @@ export default function Navbar() {
           <Link href="/" onClick={() => setOpen(false)} className="hover:text-green-200 outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm w-fit">
             Home
           </Link>
-          <Link href="../saiba-mais" onClick={() => setOpen(false)} className="hover:text-green-200 outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm w-fit">
+          <Link href="/saiba-mais" onClick={() => setOpen(false)} className="hover:text-green-200 outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm w-fit">
             Saiba mais
           </Link>
-          <Link href="../videos" onClick={() => setOpen(false)} className="hover:text-green-200 outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm w-fit">
+          <Link href="/videos" onClick={() => setOpen(false)} className="hover:text-green-200 outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm w-fit">
             Vídeos
           </Link>
-          <Link href="../sobre-nos" onClick={() => setOpen(false)} className="hover:text-green-200 outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm w-fit">
+          <Link href="/sobre-nos" onClick={() => setOpen(false)} className="hover:text-green-200 outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm w-fit">
             Sobre nós
           </Link>
 

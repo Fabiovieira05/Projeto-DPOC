@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ScrollReveal from "../components/ScrollReveal";
+import ScrollReveal from "@/components/common/scroll-reveal";
 
 // 1. Dicionário de dados estáticos para manter o componente visual limpo
 const INTEGRANTES = [
@@ -108,7 +108,7 @@ function TeamMember({ name, image, githubUrl }: { name: string; image: string | 
 // 3. Estrutura principal da Página
 export default function SobreNos() {
     return (
-        <main className="min-h-screen bg-[#F3FBF4] px-6 py-16 flex flex-col items-center font-sans">
+        <main id="main-content" className="min-h-screen bg-[#F3FBF4] px-6 py-16 flex flex-col items-center font-sans">
 
             {/* Seção Integrantes */}
             <ScrollReveal>

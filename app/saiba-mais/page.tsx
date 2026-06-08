@@ -1,16 +1,16 @@
 import React from 'react';
-import IntroducaoDpoc from './components/IntroducaoDPOC';
-import StatsBanner from './components/StatsBanner';
-import SintomasDpoc from './components/SintomasDPOC';
-import DiagnosticoDpoc from './components/DiagnosticoDPOC';
-import TratamentoDpoc from './components/TratamentoDPOC';
-import MonitoramentoTratamento from './components/MonitoramentoTratamento';
-import PrevencaoDpoc from './components/PrevencaoDpoc';
-import RedeCredenciada from './components/RedeCredenciada';
-import ScrollReveal from '../components/ScrollReveal';
-import ComplicacoesDpoc from './components/ComplicacoesDpoc';
-import FatoresRiscoDpoc from './components/FatoresRiscoDpoc';
-import DadosEpidemiologicos from './components/DadosEpidemiologicos';
+import IntroducaoDpoc from "@/components/saiba-mais/introducao-dpoc";
+import StatsBanner from "@/components/saiba-mais/stats-banner";
+import SintomasDpoc from "@/components/saiba-mais/sintomas-dpoc";
+import DiagnosticoDpoc from "@/components/saiba-mais/diagnostico-dpoc";
+import TratamentoDpoc from "@/components/saiba-mais/tratamento-dpoc";
+import MonitoramentoTratamento from "@/components/saiba-mais/monitoramento-tratamento";
+import PrevencaoDpoc from "@/components/saiba-mais/prevencao-dpoc";
+import RedeCredenciada from "@/components/saiba-mais/rede-credenciada";
+import ScrollReveal from "@/components/common/scroll-reveal";
+import ComplicacoesDpoc from "@/components/saiba-mais/complicacoes-dpoc";
+import FatoresRiscoDpoc from "@/components/saiba-mais/fatores-risco-dpoc";
+import DadosEpidemiologicos from "@/components/saiba-mais/dados-epidemiologicos";
 
 export default function SaibaMaisPage() {
   return (

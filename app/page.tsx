@@ -1,9 +1,9 @@
-import Hero from "./components/Hero";
-import Desmistificando from "./components/Desmistificando";
-import CuidadoIntegral from "./components/CuidadoIntegral";
-import BemEstarIntegral from "./components/BemEstarIntegral";
-import ScrollReveal from "./components/ScrollReveal";
-import ImpactBanner from "./components/ImpactBanner";
+import Hero from "@/components/home/hero";
+import Desmistificando from "@/components/home/desmistificando";
+import CuidadoIntegral from "@/components/home/cuidado-integral";
+import BemEstarIntegral from "@/components/home/bem-estar-integral";
+import ScrollReveal from "@/components/common/scroll-reveal";
+import ImpactBanner from "@/components/home/impact-banner";
 
 export default function Home() {
   return (

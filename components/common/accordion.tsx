@@ -10,9 +10,9 @@ export default function Accordion({ items }: { items: Item[] }) {
   const toggle = (i: number) => setOpen(open === i ? null : i);
 
   return (
-    <div className="w-full flex flex-col gap-4" role="list">
+    <ul className="w-full flex flex-col gap-4">
       {items.map((it, i) => (
-        <div key={i} className="w-full" role="listitem">
+        <li key={i} className="w-full">
           <button
             className="w-full flex items-center justify-between bg-[#326750] text-white px-6 py-5 rounded-lg transition-colors hover:bg-[#285340] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#326750]"
             onClick={() => toggle(i)}
@@ -62,8 +62,8 @@ export default function Accordion({ items }: { items: Item[] }) {
               {it.content}
             </div>
           </div>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

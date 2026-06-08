@@ -23,6 +23,7 @@ export default function Hero() {
               height={520}
               className="object-contain"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
 
@@ -48,6 +49,7 @@ export default function Hero() {
             height={520}
             className="object-contain"
             priority
+            sizes="(max-width: 1200px) 50vw, 600px"
           />
         </div>
 

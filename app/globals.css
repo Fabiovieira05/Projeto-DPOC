@@ -11,7 +11,7 @@
   --color-green-50: #D8F3DC;
   --color-green-100: #F3FBF4;
   --color-green-200: #EDF9EF;
-  --color-green-400: #578872;
+  --color-green-400: #456B5A;
   --color-green-500: #2D6A4F;
   --color-green-800: #193A2B;
   --color-grey-800: #292926;
@@ -298,4 +298,17 @@ div[vw-access-button],
 
 [vw-plugin-wrapper] {
   z-index: 9999 !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.1ms !important;
+    transition-delay: -1ms !important;
+  }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { introCardsData } from '../../../data/introCardsData';
+import { introCardsData } from "@/constants/intro-cards";
 
 
 export default function IntroducaoDpoc() {
