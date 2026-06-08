@@ -29,7 +29,7 @@ export default function BemEstarIntegral() {
           {praticasCards.map((card, index) => (
             <div key={index} className="bg-[#EDF9EF] border border-green-400 rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#D8F3DC]">
               <span className="text-3xl mb-4" role="img" aria-label={card.alt}>{card.icon}</span>
-              <h3 className="font-bold text-[#326750] mb-3 leading-snug">{card.title}</h3>
+              <h3 className="font-sans text-[#326750] mb-3 leading-snug">{card.title}</h3>
               <p className="text-sm text-zinc-700 leading-relaxed">{card.text}</p>
             </div>
           ))}
