@@ -37,6 +37,24 @@ const prevencaoData = [
         title: 'Acompanhamento médico',
         description: 'Consultas regulares ajudam na identificação precoce da doença.',
     },
+    {
+        icon: '🧬',
+        alt: 'Ícone de DNA, representando investigação genética',
+        title: 'Investigação de Alfa-1 Antitripsina',
+        description: 'Por ser uma condição genética, a prevenção foca no rastreamento precoce por exames de sangue e em evitar absolutamente o cigarro para proteger a função pulmonar.',
+    },
+    {
+    icon: '👨‍👩‍👧‍👦',
+    title: 'Atenção ao histórico familiar',
+    description: 'Pessoas com parentes diagnosticados com DPOC devem ter cuidado redobrado, evitando exposições a poluentes e realizando exames preventivos regulares, como a espirometria.',
+    alt: 'Ícone de família, representando histórico familiar',
+    },
+    {
+    icon: '👶',
+    alt: 'Ícone de bebê, representando infância',
+    title: 'Cuidados na gestação e infância',
+    description: 'A prevenção começa cedo: evitar o fumo durante a gravidez, manter a vacinação em dia e prevenir infecções respiratórias graves garantem o pleno desenvolvimento dos pulmões.',
+    },
 ];
 
 interface PreventionCardProps {

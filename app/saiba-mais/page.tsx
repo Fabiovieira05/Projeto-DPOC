@@ -24,7 +24,7 @@ export default function SaibaMaisPage() {
       <div id="prevencao"><ScrollReveal><PrevencaoDpoc /></ScrollReveal></div>
       <div id="rede"><ScrollReveal><RedeCredenciada /></ScrollReveal></div>
       <div id="complicacoes"><ScrollReveal><ComplicacoesDpoc /></ScrollReveal></div>
-      <div id="fatores-risco"><ScrollReveal><FatoresRiscoDpoc /></ScrollReveal></div>
+      {/* <div id="fatores-risco"><ScrollReveal><FatoresRiscoDpoc /></ScrollReveal></div> */}
       <div id="dados-epidemiologicos"><ScrollReveal><DadosEpidemiologicos /></ScrollReveal></div>
     </main>
   );
