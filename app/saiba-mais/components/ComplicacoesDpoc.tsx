@@ -43,12 +43,12 @@ interface ComplicacaoListItemProps {
 const ComplicacaoListItem: React.FC<ComplicacaoListItemProps> = ({ title, description, icon }) => {
   return (
     <li className="flex items-start gap-4 md:gap-6">
-      
+
       {/* Círculo do ícone idêntico ao do Diagnóstico (shrink-0 impede que ele amasse) */}
       <div className="shrink-0 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-green-100 border border-green-800 text-2xl shadow-sm">
         <span aria-hidden="true">{icon}</span>
       </div>
-      
+
       {/* Container de texto alinhado verticalmente */}
       <div className="flex flex-col pt-1 text-left">
         <h3 className="text-green-500 font-bold font-poppins text-base md:text-lg mb-1">
@@ -66,27 +66,27 @@ const ComplicacaoListItem: React.FC<ComplicacaoListItemProps> = ({ title, descri
 
 export default function ComplicacoesDpoc() {
   return (
-    <section className="w-full py-12 md:py-24">
-      <div className=" w-[90%] md:w-4/5 mx-auto flex flex-col gap-8 md:gap-12">
-        
-        {/* Cabeçalho: Centralizado no celular, alinhado à esquerda no desktop */}
+    <section className="w-full py-16 md:py-24 bg-[#f4f9f6]">
+      <div className="mx-auto w-full max-w-7xl px-6 gap-10 md:gap-12 flex flex-col">
+
+        {/* Cabeçalho */}
         <header className="flex flex-col text-center md:text-left items-center md:items-start">
           <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
             Fique atento aos riscos
           </span>
-          <h2 className="text-green-500 text-4xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
+          <h2 className="text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans leading-tight">
             Principais complicações
           </h2>
         </header>
 
-        {/* Lista de Complicações estruturada com a tag <ul> */}
-        <ul className="flex flex-col gap-6 md:gap-8 mt-4 md:mt-0">
+        {/* Grid de Complicações: 1 coluna no celular, 2 colunas no desktop */}
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-10">
           {complicacoesData.map((item, index) => (
-            <ComplicacaoListItem 
-              key={index} 
-              icon={item.icon} 
-              title={item.title} 
-              description={item.description} 
+            <ComplicacaoListItem
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
             />
           ))}
         </ul>
