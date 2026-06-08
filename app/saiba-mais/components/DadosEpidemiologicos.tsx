@@ -4,7 +4,7 @@ export default function DadosEpidemiologicos() {
     return (
         <section className="w-full py-16 md:py-24 bg-[#f4f9f5]">
             <div className="flex flex-col mx-auto w-full max-w-7xl px-6 gap-10 md:gap-12">
-                
+
                 {/* Cabeçalho alinhado ao padrão da seção anterior */}
                 <header className="flex flex-col text-center md:text-left items-center md:items-start">
                     <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
@@ -13,7 +13,7 @@ export default function DadosEpidemiologicos() {
                     <h2 className="text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
                         Dados epidemiológicos e obstáculos
                     </h2>
-                    <p className="flex flex-col h-full text-base md:text-xl leading-relaxed gap-6 text-gray-800 font-poppins max-w-4xl">
+                    <p className="flex flex-col h-full text-base md:text-xl leading-relaxed gap-6 text-gray-800 font-poppins">
                         Compreender o impacto global e nacional da DPOC é o primeiro passo para enfrentarmos as barreiras do diagnóstico. A alta prevalência da doença e a falta de detecção precoce ainda representam grandes desafios para a saúde pública.
                     </p>
                 </header>
