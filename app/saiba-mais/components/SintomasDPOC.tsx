@@ -65,7 +65,7 @@ export default function SintomasDpoc() {
                   {sintoma.icon}
                 </span>
 
-                <h3 className="text-green-500 font-bold text-base mb-1 font-sans">
+                <h3 className="text-green-500 text-base mb-1 font-sans">
                   {sintoma.title}
                 </h3>
 

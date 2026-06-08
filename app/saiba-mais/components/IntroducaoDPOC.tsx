@@ -43,7 +43,7 @@ export default function IntroducaoDpoc() {
                   >
                     {card.icon}
                   </span>
-                  <h3 className="text-green-500 font-bold text-base mb-2 font-sans">{card.title}</h3>
+                  <h3 className="text-green-500 text-base mb-2 font-sans">{card.title}</h3>
                   <p className="text-sm leading-normal font-poppins">{card.description}</p>
                 </div>
               ))}

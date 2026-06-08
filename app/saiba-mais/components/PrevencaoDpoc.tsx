@@ -61,7 +61,7 @@ const PreventionCard: React.FC<PreventionCardProps> = ({ stepNumber, icon, alt, 
             </span>
 
             {/* Título com ícone */}
-            <h3 className="text-green-500 font-bold text-base md:text-lg mb-2 font-poppins flex items-center gap-2">
+            <h3 className="text-green-500 text-base md:text-lg mb-2 font-sans flex items-center gap-2">
                 <span aria-hidden="true" role="img" aria-label={alt} className="text-lg md:text-xl">{icon}</span>
                 {title}
             </h3>
