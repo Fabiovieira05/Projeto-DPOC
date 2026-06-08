@@ -4,6 +4,15 @@ import Footer from "./components/Footer";
 import { Science_Gothic, Poppins } from "next/font/google";
 import VLibrasWidget from "./components/Vlibras";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DPOC",
+  description: "Portal informativo sobre a Doença Pulmonar Obstrutiva Crônica",
+  icons: {
+    icon: "/favicon-transparente.png",
+  },
+};
 
 const scienceGothic = Science_Gothic({
   subsets: ["latin"],
