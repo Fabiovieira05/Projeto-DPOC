@@ -36,7 +36,7 @@ const fatoresRiscoData = [
 export default function FatoresRiscoDpoc() {
   return (
     <section className="w-full py-16 md:py-24">
-      <div className="max-w-6xl w-[90%] md:w-4/5 mx-auto flex flex-col gap-10 md:gap-12">
+      <div className=" w-[90%] md:w-4/5 mx-auto flex flex-col gap-10 md:gap-12">
         
         {/* Cabeçalho */}
         <header className="flex flex-col text-center md:text-left items-center md:items-start">
