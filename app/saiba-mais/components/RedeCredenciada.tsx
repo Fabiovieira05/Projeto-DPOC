@@ -75,7 +75,7 @@ export default function RedeCredenciada() {
                             </div>
 
                             {/* Título */}
-                            <h3 className="text-green-500 font-bold text-base md:text-lg mb-2 font-poppins">
+                            <h3 className="text-green-500 text-base md:text-lg mb-2 font-sans">
                                 {card.title}
                             </h3>
 

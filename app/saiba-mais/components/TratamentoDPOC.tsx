@@ -43,7 +43,7 @@ const TreatmentCard: React.FC<TreatmentCardProps> = ({ stepNumber, icon, title, 
       </span>
 
       {/* Título com Ícone embutido (inline) */}
-      <h3 className="text-green-500 font-bold text-base md:text-lg mb-2 font-poppins flex items-center gap-2">
+      <h3 className="text-green-500 text-base md:text-lg mb-2 font-sans flex items-center gap-2">
         <span aria-hidden="true" className="text-lg md:text-xl">{icon}</span>
         {title}
       </h3>
