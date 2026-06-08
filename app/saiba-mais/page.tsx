@@ -10,6 +10,7 @@ import RedeCredenciada from './components/RedeCredenciada';
 import ScrollReveal from '../components/ScrollReveal';
 import ComplicacoesDpoc from './components/ComplicacoesDpoc';
 import FatoresRiscoDpoc from './components/FatoresRiscoDpoc';
+import DadosEpidemiologicos from './components/DadosEpidemiologicos';
 
 export default function SaibaMaisPage() {
   return (
@@ -24,6 +25,7 @@ export default function SaibaMaisPage() {
       <div id="rede"><ScrollReveal><RedeCredenciada /></ScrollReveal></div>
       <div id="complicacoes"><ScrollReveal><ComplicacoesDpoc /></ScrollReveal></div>
       <div id="fatores-risco"><ScrollReveal><FatoresRiscoDpoc /></ScrollReveal></div>
+      <div id="dados-epidemiologicos"><ScrollReveal><DadosEpidemiologicos /></ScrollReveal></div>
     </main>
   );
 }
