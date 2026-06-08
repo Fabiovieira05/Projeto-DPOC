@@ -21,11 +21,6 @@ const diagnosisData = [
     title: 'Exames complementares',
     description: 'Radiografia e TC de tórax, gasometria arterial, oximetria e hemograma para avaliar complicações e comorbidades.',
   },
-  {
-    icon: '📊',
-    title: 'Classificação GOLD',
-    description: 'Estadiamento de I (leve) a IV (muito grave) com base no VEF1, sintomas e frequência de exacerbações.',
-  },
 ];
 
 interface DiagnosisListItemProps {

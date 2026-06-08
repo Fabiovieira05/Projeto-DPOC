@@ -35,41 +35,41 @@ const fatoresRiscoData = [
 
 export default function FatoresRiscoDpoc() {
   return (
-    <section className="w-full py-16 md:py-24">
-      <div className=" w-[90%] md:w-4/5 mx-auto flex flex-col gap-10 md:gap-12">
-        
+    <section className="w-full py-16 md:py-24 bg-[#f4f9f6]">
+      <div className="mx-auto w-full max-w-7xl px-6 flex flex-col gap-10 md:gap-12">
+
         {/* Cabeçalho */}
         <header className="flex flex-col text-center md:text-left items-center md:items-start">
           <span className="font-poppins text-green-400 font-medium text-lg md:text-2xl mb-2 md:mb-0">
             Fique alerta
           </span>
-          
-          <h2 className="text-green-500 text-4xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
+
+          <h2 className="text-green-500 text-3xl md:text-4xl lg:text-5xl tracking-wide mb-6 md:mb-8 font-sans">
             Fatores de risco
           </h2>
-          
-          <p className="flex flex-col text-center md:text-left h-full text-base md:text-lg lg:text-xl leading-relaxed gap-4 md:gap-6 text-gray-900 font-poppins">
+
+          <p className="text-sm md:text-xl leading-relaxed text-gray-900 font-poppins">
             Embora o cigarro seja o grande vilão, existem outros fatores importantes que podem desencadear a DPOC.
           </p>
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {fatoresRiscoData.map((item, index) => (
-            <article 
+            <article
               key={index}
               className="bg-[#EDF9EF] border border-green-400 rounded-xl p-6 flex flex-col justify-start transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#D8F3DC]"
             >
               {/* Ícone */}
               <span aria-hidden="true"
-                    className="text-green-500 font-sans text-3xl md:text-4xl font-light mb-4 block">
+                className="text-green-500 font-sans text-3xl md:text-4xl font-light mb-4 block">
                 {item.icon}
               </span>
-              
+
               {/* Título */}
               <h3 className="text-green-500 text-base md:text-lg mb-2 font-sans flex items-center gap-2">
                 {item.title}
               </h3>
-              
+
               {/* Descrição */}
               <p className="text-gray-800 font-poppins text-sm md:text-base leading-relaxed">
                 {item.description}

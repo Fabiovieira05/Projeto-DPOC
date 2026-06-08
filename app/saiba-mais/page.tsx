@@ -17,15 +17,15 @@ export default function SaibaMaisPage() {
     <main id="main-content" className="min-h-screen bg-[#f4f9f5]">
       <div id="introducao"><ScrollReveal><IntroducaoDpoc /></ScrollReveal></div>
       <div id="estatisticas"><ScrollReveal><StatsBanner /></ScrollReveal></div>
+      <div id="dados-epidemiologicos"><ScrollReveal><DadosEpidemiologicos /></ScrollReveal></div>
+      <div id="fatores-risco"><ScrollReveal><FatoresRiscoDpoc /></ScrollReveal></div>
       <div id="sintomas"><ScrollReveal><SintomasDpoc /></ScrollReveal></div>
       <div id="diagnostico"><ScrollReveal><DiagnosticoDpoc /></ScrollReveal></div>
+      <div id="complicacoes"><ScrollReveal><ComplicacoesDpoc /></ScrollReveal></div>
       <div id="tratamento"><ScrollReveal><TratamentoDpoc /></ScrollReveal></div>
       <div id="monitoramento"><ScrollReveal><MonitoramentoTratamento /></ScrollReveal></div>
       <div id="prevencao"><ScrollReveal><PrevencaoDpoc /></ScrollReveal></div>
       <div id="rede"><ScrollReveal><RedeCredenciada /></ScrollReveal></div>
-      <div id="complicacoes"><ScrollReveal><ComplicacoesDpoc /></ScrollReveal></div>
-      {/* <div id="fatores-risco"><ScrollReveal><FatoresRiscoDpoc /></ScrollReveal></div> */}
-      <div id="dados-epidemiologicos"><ScrollReveal><DadosEpidemiologicos /></ScrollReveal></div>
     </main>
   );
 }
